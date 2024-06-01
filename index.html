@@ -1,11 +1,171 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Certus Go</title>
-</head>
-<body>
-    Certus Go 2020 - Bienvenido
-</body>
-</html>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    line-height: 1.6;
+    background-color: #f3f2ef; /* Fondo gris claro */
+    color: #333333; /* Texto gris oscuro */
+}
+
+
+header {
+    background-color: #283e4a; /* Fondo azul oscuro */
+    color: white;
+    padding: 20px 0;
+    text-align: center;
+}
+
+header h1 {
+    margin-bottom: 10px;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 10px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+}
+
+main {
+    padding: 20px;
+}
+
+section {
+    margin-bottom: 20px;
+    background-color: white; /* Fondo blanco */
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+form {
+    max-width: 600px; /* Ancho máximo del formulario */
+    margin: 0 auto; /* Centrar el formulario */
+}
+
+form label {
+    display: block;
+    margin-top: 10px;
+}
+
+form input, form textarea {
+    width: 100%;
+    max-width: 400px; /* Ancho máximo de los campos de texto */
+    padding: 10px;
+    margin-top: 5px;
+    border: 1px solid #ccc; /* Borde gris claro */
+    border-radius: 5px;
+    background-color: #f9f9f9; /* Fondo gris muy claro */
+    color: #333333; /* Texto gris oscuro */
+}
+
+
+form button {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #0073b1;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+    margin-top: 10px;
+}
+
+
+form button:hover {
+    background-color: #005582; /* Fondo azul más oscuro */
+}
+
+footer {
+    background-color: #283e4a; /* Fondo azul oscuro */
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+    margin-top: 20px;
+}
+
+.tooltip {
+    position: relative;
+    display: inline-block;
+}
+
+.tooltip .tooltiptext {
+    visibility: hidden;
+    width: 200px;
+    background-color: black;
+    color: #fff;
+    text-align: center;
+    border-radius: 6px;
+    padding: 5px;
+    position: absolute;
+    z-index: 1;
+    bottom: 125%; /* Posición del tooltip */
+    left: 50%;
+    margin-left: -100px;
+    opacity: 0;
+    transition: opacity 0.3s;
+}
+
+.tooltip:hover .tooltiptext {
+    visibility: visible;
+    opacity: 1;
+}
+
+/* Media Queries para Responsividad */
+@media (max-width: 768px) {
+    nav ul li {
+        display: block;
+        text-align: center;
+        margin: 10px 0;
+    }
+
+    form input, form textarea {
+        max-width: 100%;
+    }
+}
+
+form input, form textarea {
+    transition: border-color 0.3s;
+}
+
+
+.error-message {
+    color: red;
+    font-size: 0.875rem;
+    margin-top: 5px;
+}
+
+form input:valid, form textarea:valid {
+    border-color: green;
+}
+
+form input:invalid, form textarea:invalid {
+    border-color: red;
+}
+
+
+.form-footer {
+    margin-top: 20px;
+    text-align: center;
+}
+
+.profesor-foto {
+    display: block;
+    margin: 20px auto;
+    max-width: 200px; /* Ajusta este valor según el tamaño deseado */
+    border-radius: 50%; /* Hace la imagen redonda */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
