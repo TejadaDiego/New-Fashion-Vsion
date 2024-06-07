@@ -2,40 +2,42 @@
 <html lang="es">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial- scale=1.0">
-    <title> Mi Pagina Web</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contacto - Tienda de Ropa</title>
     <link rel="stylesheet" href="styles.css">
 
-<script>
-    function guardarContacto(event) {
-        event.preventDefault();
+    <script>
+        function guardarContacto(event) {
+            event.preventDefault();
 
-        const nombre = document.getElementById('nombre').value;
-        const email = document.getElementById('email').value;
-        const comentario = document.getElementById('comentario').value;
+            const nombre = document.getElementById('nombre').value;
+            const email = document.getElementById('email').value;
+            const telefono = document.getElementById('telefono').value;
+            const mensaje = document.getElementById('mensaje').value;
 
-        const contacto= {
-            nombre,
-            email,
-            comentario,
-            fecha: new Date().toISOString()
-        };
+            const contacto = {
+                nombre,
+                email,
+                telefono,
+                mensaje,
+                fecha: new Date().toISOString()
+            };
 
-        let contactos = localStorage.getItem('contactos');
-        if(contactos){
-            contactos = JSON.parse(contactos);
-        } else {
-            contactos=[];
+            let contactos = localStorage.getItem('contactos');
+            if (contactos) {
+                contactos = JSON.parse(contactos);
+            } else {
+                contactos = [];
+            }
+
+            contactos.push(contacto);
+            localStorage.setItem('contactos', JSON.stringify(contactos));
+
+            alert('Gracias por contactarnos. Te responderemos pronto.');
+            document.getElementById('contacto-form').reset();
         }
 
-        contactos.push(contacto);
-        localStorage.setItem('contactos', JSON.stringify(contactos));
-
-        alert('Contacto guardado exitosamente');
-        document.getElementById('contacto-form').reset();
-    }
-
-    function exportarContactos() {
+        function exportarContactos() {
             const contactos = localStorage.getItem('contactos');
             if (contactos) {
                 const blob = new Blob([contactos], { type: 'text/plain;charset=utf-8' });
@@ -47,33 +49,36 @@
                 alert('No hay contactos para exportar');
             }
         }
-
     </script>
 </head>
-</body>
-<header>
-    <h1>Inicio</h1>
-    <nav>
-        <ul>
-            <li><a href="inicio.html">Inicio</a></li>
-            <li><a href="sobre-mi.html">Sobre Mí</a></li>
-            <li><a href="contacto.html">contacto</a></li>
-        </ul>
-    </nav>
-</header>
-<main>
+<body>
+    <header>
+        <h1>Contacto</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="productos.html">Productos</a></li>
+                <li><a href="nosotros.html">Nosotros</a></li>
+                <li><a href="contacto.html">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
         <section id="contacto">
-            <h2>Contacto</h2>
-            <p>Puedes contactarme a travez del formulario ante cualquier duda o inquietud :D.</p>
+            <h2>¡Contáctanos!</h2>
+            <p>¿Tienes alguna pregunta o sugerencia? ¡Estamos aquí para ayudarte!</p>
             <form id="contacto-form" onsubmit="guardarContacto(event)">
                 <label for="nombre">Nombre:</label>
                 <input type="text" id="nombre" name="nombre" required>
-                
+
                 <label for="email">Email:</label>
                 <input type="email" id="email" name="email" required>
 
-                <label for="comentario">Comentario:</label>
-                <textarea id="comentario" name="comentario" required></textarea>
+                <label for="telefono">Teléfono:</label>
+                <input type="tel" id="telefono" name="telefono">
+
+                <label for="mensaje">Mensaje:</label>
+                <textarea id="mensaje" name="mensaje" required></textarea>
 
                 <div class="form-footer">
                     <button type="submit">Enviar</button>
@@ -83,7 +88,7 @@
         </section>
     </main>
     <footer>
-        <p>&copy; 2024 Mi Página Web. Todos los derechos reservados.</p>
-     </footer>
- </body>
+        <p>&copy; 2024 Tienda de Ropa. Todos los derechos reservados.</p>
+    </footer>
+</body>
 </html>
