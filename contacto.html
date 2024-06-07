@@ -2,78 +2,37 @@
 <html lang="es">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial- scale=1.0">
-    <title> Mi Pagina Web</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mi Página Web</title>
     <link rel="stylesheet" href="styles.css">
-
-<script>
-    function guardarContacto(event) {
-        event.preventDefault();
-
-        const nombre = document.getElementById('nombre').value;
-        const email = document.getElementById('email').value;
-        const comentario = document.getElementById('comentario').value;
-
-        const contacto= {
-            nombre,
-            email,
-            comentario,
-            fecha: new Date().toISOString()
-        };
-
-        let contactos = localStorage.getItem('contactos');
-        if(contactos){
-            contactos = JSON.parse(contactos);
-        } else {
-            contactos=[];
-        }
-
-        contactos.push(contacto);
-        localStorage.setItem('contactos', JSON.stringify(contactos));
-
-        alert('Contacto guardado exitosamente');
-        document.getElementById('contacto-form').reset();
-    }
-
-    function exportarContactos() {
-            const contactos = localStorage.getItem('contactos');
-            if (contactos) {
-                const blob = new Blob([contactos], { type: 'text/plain;charset=utf-8' });
-                const link = document.createElement('a');
-                link.href = URL.createObjectURL(blob);
-                link.download = 'contactos.txt';
-                link.click();
-            } else {
-                alert('No hay contactos para exportar');
-            }
-        }
-
-    </script>
 </head>
-</body>
-<header>
-    <h1>Inicio</h1>
-    <nav>
-        <ul>
-            <li><a href="inicio.html">Inicio</a></li>
-            <li><a href="sobre-mi.html">Sobre Mí</a></li>
-            <li><a href="contacto.html">contacto</a></li>
-        </ul>
-    </nav>
-</header>
-<main>
+<body>
+    <header>
+        <h1>Inicio</h1>
+        <nav>
+            <ul>
+                <li><a href="inicio.html">Inicio</a></li>
+                <li><a href="sobre-mi.html">Sobre Mí</a></li>
+                <li><a href="contacto.html">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
         <section id="contacto">
             <h2>Contacto</h2>
-            <p>Puedes contactarme a travez del formulario ante cualquier duda o inquietud :D.</p>
+            <p>Puedes contactarme a través del formulario ante cualquier duda o inquietud :D.</p>
             <form id="contacto-form" onsubmit="guardarContacto(event)">
                 <label for="nombre">Nombre:</label>
                 <input type="text" id="nombre" name="nombre" required>
+                <div id="nombre-error" class="error-message"></div>
                 
                 <label for="email">Email:</label>
                 <input type="email" id="email" name="email" required>
+                <div id="email-error" class="error-message"></div>
 
                 <label for="comentario">Comentario:</label>
                 <textarea id="comentario" name="comentario" required></textarea>
+                <div id="comentario-error" class="error-message"></div>
 
                 <div class="form-footer">
                     <button type="submit">Enviar</button>
@@ -84,6 +43,8 @@
     </main>
     <footer>
         <p>&copy; 2024 Mi Página Web. Todos los derechos reservados.</p>
-     </footer>
- </body>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
 </html>
