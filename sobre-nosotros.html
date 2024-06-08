@@ -11,8 +11,12 @@
         }
         p {
             background-color: white;
-            padding: 10px; /* Añadir un poco de espacio alrededor del texto */
-            margin: 0; /* Eliminar el margen predeterminado */
+            padding: 10px;
+            margin: 0;
+            color: black; /* Color de texto negro */
+        }
+        section p:last-of-type {
+            color: black; /* Aplicar color de texto negro solo a la última etiqueta <p> dentro de la sección */
         }
     </style>
 </head>
@@ -59,7 +63,7 @@
             </div>
             <div class="member">
                 <img src="o.png" alt="Miembro 4">
-                <p>tel: 966 115 267</p>
+                <p style="color: black;">tel: 966 115 267</p>
             </div>
         </section>
     </main>
