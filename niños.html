@@ -32,7 +32,27 @@
             color: white; /* Texto blanco */
         }
 
-        /* Resto de estilos... */
+        /* Estilos para la sección de contacto */
+        #contacto {
+            padding: 20px;
+            background-color: rgba(0, 0, 0, 0.5); /* Fondo transparente */
+        }
+
+        /* Estilos para los labels y inputs dentro de la sección de contacto */
+        #contacto label, #contacto input {
+            border: 1px solid white; /* Borde blanco */
+            padding: 5px; /* Espaciado interno */
+            margin-bottom: 10px; /* Margen inferior */
+            background-color: rgba(255, 255, 255, 0.5); /* Fondo blanco con 50% de opacidad */
+            color: black; /* Texto negro */
+        }
+
+        /* Estilos para el texto y botones dentro de la sección de contacto */
+        #contacto p, #contacto button {
+            background-color: transparent; /* Fondo transparente */
+            color: white; /* Texto blanco */
+            border: none; /* Sin borde */
+        }
     </style>
 
     <!-- Scripts JavaScript -->
@@ -82,6 +102,49 @@
     </script>
 </head>
 <body>
-    <!-- Resto del contenido... -->
+    <div class="container">
+        <header>
+            <h1>Inicio</h1>
+            <!-- Barra de navegación -->
+            <nav>
+                <ul>
+                    <!-- Enlaces a otras páginas -->
+                    <li><a href="index1.html">Inicio</a></li>
+                    <li><a href="niños.html">Niños</a></li>
+                    <li><a href="jovenes.html">Jovenes</a></li>
+                    <li><a href="adultos.html">Adultos</a></li>
+                    <li><a href="contacto.html">Contacto</a></li>
+                    <li><a href="sobre-nosotros.html">Nosotros somos</a></li>
+                </ul>
+            </nav>
+        </header>
+        <main>
+            <section id="contacto">
+                <h2>Contacto</h2>
+                <p>¿Alguna duda o inquietud? Estoy aquí para ayudarte. No dudes en contactarme a través del formulario. ¡Siempre estoy disponible para ayudarte en lo que necesites!</p>
+                <!-- Formulario de contacto -->
+                <form id="contacto-form" onsubmit="guardarContacto(event)">
+                    <label for="nombre">Nombre:</label>
+                    <input type="text" id="nombre" name="nombre" required>
+                    
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" required>
+
+                    <label for="comentario">Comentario:</label>
+                    <textarea id="comentario" name="comentario" required></textarea>
+
+                    <div class="form-footer">
+                        <button type="submit">Enviar</button>
+                    </div>
+                </form>
+                <!-- Botón para exportar contactos -->
+                <button onclick="exportarContactos()">Exportar Contactos</button>
+            </section>
+        </main>
+        <footer>
+            <!-- Texto del pie de página -->
+            <p>&copy; 2024 Mi Página Web. Todos los derechos reservados.</p>
+         </footer>
+    </div> <!-- Cierre del contenedor principal -->
 </body>
 </html>
