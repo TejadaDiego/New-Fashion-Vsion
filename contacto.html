@@ -28,12 +28,13 @@
             background-attachment: fixed;
             margin: 0;
             padding: 0;
+            color: white; /* Texto blanco */
         }
 
         /* Estilos para la sección de contacto */
         #contacto {
             padding: 20px;
-            background-color: transparent; /* Fondo transparente */
+            background-color: rgba(0, 0, 0, 0.5); /* Fondo transparente */
         }
 
         /* Estilos para los labels y inputs dentro de la sección de contacto */
@@ -42,6 +43,7 @@
             padding: 5px; /* Espaciado interno */
             margin-bottom: 10px; /* Margen inferior */
             background-color: rgba(255, 255, 255, 0.5); /* Fondo blanco con 50% de opacidad */
+            color: black; /* Texto negro */
         }
 
         /* Estilos para el texto y botones dentro de la sección de contacto */
@@ -53,7 +55,46 @@
     </style>
 
     <script>
-        // Aquí va tu script JavaScript...
+        function guardarContacto(event) {
+            event.preventDefault();
+
+            const nombre = document.getElementById('nombre').value;
+            const email = document.getElementById('email').value;
+            const comentario = document.getElementById('comentario').value;
+
+            const contacto = {
+                nombre,
+                email,
+                comentario,
+                fecha: new Date().toISOString()
+            };
+
+            let contactos = localStorage.getItem('contactos');
+            if (contactos) {
+                contactos = JSON.parse(contactos);
+            } else {
+                contactos = [];
+            }
+
+            contactos.push(contacto);
+            localStorage.setItem('contactos', JSON.stringify(contactos));
+
+            alert('Contacto guardado exitosamente');
+            document.getElementById('contacto-form').reset();
+        }
+
+        function exportarContactos() {
+            const contactos = localStorage.getItem('contactos');
+            if (contactos) {
+                const blob = new Blob([contactos], { type: 'text/plain;charset=utf-8' });
+                const link = document.createElement('a');
+                link.href = URL.createObjectURL(blob);
+                link.download = 'contactos.txt';
+                link.click();
+            } else {
+                alert('No hay contactos para exportar');
+            }
+        }
     </script>
 </head>
 <body>
@@ -64,14 +105,14 @@
                 <ul>
                     <li><a href="inicio.html">Inicio</a></li>
                     <li><a href="sobre-nosotros.html">Sobre Nosotros</a></li>
-                    <li><a href="contacto.html">contacto</a></li>
+                    <li><a href="contacto.html">Contacto</a></li>
                 </ul>
             </nav>
         </header>
         <main>
             <section id="contacto">
                 <h2>Contacto</h2>
-                <p>"¿Alguna duda o inquietud? Estoy aquí para ayudarte. No dudes en contactarme a través del formulario. ¡Siempre estoy disponible para ayudarte en lo que necesites!"</p>
+                <p>¿Alguna duda o inquietud? Estoy aquí para ayudarte. No dudes en contactarme a través del formulario. ¡Siempre estoy disponible para ayudarte en lo que necesites!</p>
                 <form id="contacto-form" onsubmit="guardarContacto(event)">
                     <label for="nombre">Nombre:</label>
                     <input type="text" id="nombre" name="nombre" required>
