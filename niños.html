@@ -1,48 +1,87 @@
 <!DOCTYPE html>
 <html lang="es">
-    
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>New Fashion Vision</title>
-    <link rel="stylesheet" href="styles 2.css">
+    <title>Mi Pagina Web</title>
+    <link rel="stylesheet" href="styles.css">
+
+    <!-- Estilos CSS internos -->
+    <style>
+        /* Resetear márgenes y relleno */
+        body, html {
+            margin: 0;
+            padding: 0;
+        }
+
+        /* Estilos para el contenedor principal */
+        .container {
+            border: 10px solid black; /* Ancho y estilo del borde */
+            padding: 20px; /* Relleno dentro del contenedor */
+            box-sizing: border-box; /* Incluir el borde y el relleno en el ancho y alto del contenedor */
+        }
+
+        /* Estilos específicos para el cuerpo */
+        body {
+            background-image: url('l.jpg'); /* URL de la imagen de fondo */
+            background-size: cover; /* Cubrir todo el cuerpo */
+            background-position: center; /* Posición centrada */
+            background-attachment: fixed; /* Fondo fijo mientras se desplaza */
+            margin: 0;
+            padding: 0;
+            color: white; /* Texto blanco */
+        }
+
+        /* Resto de estilos... */
+    </style>
+
+    <!-- Scripts JavaScript -->
+    <script>
+        // Función para guardar el contacto en el almacenamiento local
+        function guardarContacto(event) {
+            event.preventDefault();
+
+            const nombre = document.getElementById('nombre').value;
+            const email = document.getElementById('email').value;
+            const comentario = document.getElementById('comentario').value;
+
+            const contacto = {
+                nombre,
+                email,
+                comentario,
+                fecha: new Date().toISOString()
+            };
+
+            let contactos = localStorage.getItem('contactos');
+            if (contactos) {
+                contactos = JSON.parse(contactos);
+            } else {
+                contactos = [];
+            }
+
+            contactos.push(contacto);
+            localStorage.setItem('contactos', JSON.stringify(contactos));
+
+            alert('Contacto guardado exitosamente');
+            document.getElementById('contacto-form').reset();
+        }
+
+        // Función para exportar los contactos almacenados
+        function exportarContactos() {
+            const contactos = localStorage.getItem('contactos');
+            if (contactos) {
+                const blob = new Blob([contactos], { type: 'text/plain;charset=utf-8' });
+                const link = document.createElement('a');
+                link.href = URL.createObjectURL(blob);
+                link.download = 'contactos.txt';
+                link.click();
+            } else {
+                alert('No hay contactos para exportar');
+            }
+        }
+    </script>
 </head>
 <body>
-    <header>
-        <nav>
-            <ul>
-                <li><a href="index1.html">Inicio</a></li>
-                <li><a href="niños.html">Niños</a></li>
-                <li><a href="jovenes.html">Jóvenes</a></li>
-                <li><a href="adultos.html">Adultos</a></li>
-                <li><a href="contacto.html">Contacto</a></li>
-                <li><a href="añadir producto">añadir producto</a></li>
-            </ul>
-        </nav>
-    </header>
-    <main>
-        <section id="content">
-            <h1>Niños</h1>
-            <div class="animation-box">
-                <div class="flex-container">
-                    <div class="flex-item">
-                        <img src="zapatillas.jpg" alt="observe nuestra gran variedad de modelos">
-                        <div class="overlay"></div>
-                        <p>Zapatillas</p>
-                    </div>
-                    <div class="flex-item">
-                        <img src="accesorios.jpg" alt="observa nuestra gran variedad de accesorios">
-                        <div class="overlay"></div>
-                        <p>Accesorios</p>
-                    </div>
-                    <div class="flex-item">
-                        <img src="ropa.jpg" alt="observa nuestra gran variedad de prendas de vestir">
-                        <div class="overlay"></div>
-                        <p>Ropa</p>
-                    </div> 
-                </div>
-            </div>
-        </section>
-    </main>
+    <!-- Resto del contenido... -->
 </body>
 </html>
