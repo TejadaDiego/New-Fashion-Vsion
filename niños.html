@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="styles 2.css">
     <style>
         body {
-            background-image: url('l.jpg'); /* Reemplaza 'ruta/a/imagen.jpg' con la ruta de tu imagen de fondo */
+            background-image: url('l.jpg'); /* Reemplaza 'l.jpg' con la ruta de tu imagen de fondo */
             background-size: cover; /* Cubrir todo el cuerpo */
             background-position: center; /* Posición centrada */
             background-attachment: fixed; /* Fondo fijo mientras se desplaza */
@@ -24,6 +24,26 @@
             background-color: rgba(255, 255, 255, 0.8); /* Color de fondo con opacidad */
             padding: 20px;
             border-radius: 10px; /* Bordes redondeados */
+        }
+        header {
+            text-align: center; /* Centrar el texto del encabezado */
+            margin-bottom: 20px; /* Espacio inferior */
+        }
+        #content {
+            text-align: center; /* Centrar el contenido */
+        }
+        .flex-container {
+            display: flex;
+            justify-content: center; /* Centrar horizontalmente */
+            align-items: center; /* Centrar verticalmente */
+            flex-wrap: wrap; /* Permitir que los elementos flexibles se envuelvan en múltiples líneas */
+        }
+        .flex-item {
+            margin: 10px; /* Espacio entre elementos */
+            text-align: center; /* Centrar el texto */
+        }
+        .flex-item img {
+            max-width: 100%; /* Asegurar que las imágenes no superen el ancho del contenedor */
         }
     </style>
 </head>
