@@ -33,21 +33,27 @@
         /* Estilos para la sección de contacto */
         #contacto {
             padding: 20px;
-            background-color: transparent; /* Fondo transparente */
+            background-color: rgba(255, 255, 255, 0.7); /* Fondo blanco con opacidad */
+        }
+
+        /* Estilos para el párrafo dentro de la sección de contacto */
+        #contacto p {
+            background-color: white; /* Fondo blanco */
+            padding: 10px; /* Relleno */
         }
 
         /* Estilos para los labels y inputs dentro de la sección de contacto */
-        #contacto label, #contacto input {
-            border: 1px solid white; /* Borde blanco */
+        #contacto label, #contacto input, #contacto textarea {
+            border: 1px solid black; /* Borde negro */
             padding: 5px; /* Espaciado interno */
             margin-bottom: 10px; /* Margen inferior */
-            background-color: rgba(255, 255, 255, 0.5); /* Fondo blanco con 50% de opacidad */
+            background-color: white; /* Fondo blanco */
         }
 
         /* Estilos para el texto y botones dentro de la sección de contacto */
         #contacto p, #contacto button {
             background-color: transparent; /* Fondo transparente */
-            color: white; /* Texto blanco */
+            color: black; /* Texto negro */
             border: none; /* Sin borde */
         }
     </style>
@@ -71,7 +77,7 @@
         <main>
             <section id="contacto">
                 <h2>Contacto</h2>
-                <p>"¿Alguna duda o inquietud? Estoy aquí para ayudarte. No dudes en contactarme a través del formulario. ¡Siempre estoy disponible para ayudarte en lo que necesites!"</p>
+                <p style="background-color: white; padding: 10px;">"¿Alguna duda o inquietud? Estoy aquí para ayudarte. No dudes en contactarme a través del formulario. ¡Siempre estoy disponible para ayudarte en lo que necesites!"</p>
                 <form id="contacto-form" onsubmit="guardarContacto(event)">
                     <label for="nombre">Nombre:</label>
                     <input type="text" id="nombre" name="nombre" required>
