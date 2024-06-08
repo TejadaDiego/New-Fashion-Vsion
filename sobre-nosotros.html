@@ -5,50 +5,37 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sobre Nosotros</title>
     <link rel="stylesheet" href="styles.css">
-    <!-- Estilos CSS internos -->
     <style>
-        /* Establece el fondo transparente para las secciones y el pie de página */
         section, footer {
             background-color: transparent;
         }
-
-        /* Estilos para el párrafo */
         p {
-            background-color: white; /* Fondo blanco para los párrafos */
-            padding: 10px; /* Espaciado interno */
-            margin: 0; /* Elimina el margen exterior */
+            background-color: white;
+            padding: 10px;
+            margin: 0;
             color: black; /* Color de texto negro */
         }
-
-        /* Estilos para el último párrafo dentro de la sección */
         section p:last-of-type {
-            color: black; /* Aplica color de texto negro solo al último párrafo dentro de la sección */
+            color: black; /* Aplicar color de texto negro solo a la última etiqueta <p> dentro de la sección */
         }
     </style>
 </head>
 <body style="background-color: black; background-image: url('1.jpeg'); background-size: cover; background-repeat: no-repeat;">
-    <!-- Encabezado -->
     <header>
         <h1>Sobre Nosotros</h1>
-        <!-- Barra de navegación -->
         <nav>
             <ul>
-                <!-- Enlaces a otras páginas -->
                 <li><a href="index1.html">Inicio</a></li>
                 <li><a href="sobre-nosotros.html">Sobre Nosotros</a></li>
                 <li><a href="contacto.html">Contacto</a></li>
             </ul>
         </nav>
     </header>
-    <!-- Contenido principal -->
     <main>
-        <!-- Sección -->
         <section>
             <h2>Nuestro Equipo</h2>
-            <!-- Miembros del equipo -->
             <div class="member">
                 <img src="i.jpg" alt="Miembro 1">
-                <!-- Información sobre el primer miembro -->
                 <p>Nombres: Jordy Servando
                 Apellidos: Serrato Canaza
                 tel: 934225368
@@ -56,11 +43,36 @@
                 pasatiempos: hacer deporte, salir a jugar videojuegos, trabajar, limpiar, salir a comer, ver películas 
                 </p>
             </div>
-            <!-- Se repite el mismo formato para los demás miembros -->
-            <!-- ... -->
+            <div class="member">
+                <img src="a.jpg" alt="Miembro 2">
+                <p>Nombres: Diego
+                    Apellidos: Tejada Espinal
+                    tel: 962 542 289
+                    edad: 17
+                    pasatiempos: fanático del fútbol, jugar videojuegos, salir a caminar 
+                </p>
+            </div>
+            <div class="member">
+                <img src="e.jpg" alt="Miembro 3">
+                <p>Nombres: Anghelly Ivania
+                    Apellidos: Molleda Villarroel
+                    tel: 934 971 983
+                    edad: 17 
+                    pasatiempos: jugar videojuegos, dibujar, pintar, salir a comprar
+                </p>
+            </div>
+            <div class="member">
+                <img src="o.png" alt="Miembro 4">
+                <p style="color: black;">
+                    Nombres:Lukas Jhair
+                    Apellidos:Malca Gomez
+                    tel: 966 115 267
+                    pasatiempos:Boxeo videojuegos
+                    salir a correr como rocky
+                </p>
+            </div>
         </section>
     </main>
-    <!-- Pie de página -->
     <footer>
         <p>&copy; 2024 Mi página web. Todos los derechos reservados.</p>
     </footer>
