@@ -3,148 +3,55 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mi Pagina Web</title>
-    <link rel="stylesheet" href="styles.css">
-
-    <!-- Estilos CSS internos -->
+    <title>New Fashion Vision</title>
+    <link rel="stylesheet" href="styles 2.css">
     <style>
-        /* Resetear márgenes y relleno */
-        body, html {
-            margin: 0;
-            padding: 0;
-        }
-
-        /* Estilos para el contenedor principal */
-        .container {
-            border: 10px solid black; /* Ancho y estilo del borde */
-            padding: 20px; /* Relleno dentro del contenedor */
-            box-sizing: border-box; /* Incluir el borde y el relleno en el ancho y alto del contenedor */
-        }
-
-        /* Estilos específicos para el cuerpo */
         body {
-            background-image: url('l.jpg'); /* URL de la imagen de fondo */
+            background-image: url('ruta/a/imagen.jpg'); /* Reemplaza 'ruta/a/imagen.jpg' con la ruta de tu imagen de fondo */
             background-size: cover; /* Cubrir todo el cuerpo */
             background-position: center; /* Posición centrada */
             background-attachment: fixed; /* Fondo fijo mientras se desplaza */
             margin: 0;
             padding: 0;
-            color: white; /* Texto blanco */
-        }
-
-        /* Estilos para la sección de contacto */
-        #contacto {
-            padding: 20px;
-            background-color: rgba(0, 0, 0, 0.5); /* Fondo transparente */
-        }
-
-        /* Estilos para los labels y inputs dentro de la sección de contacto */
-        #contacto label, #contacto input {
-            border: 1px solid white; /* Borde blanco */
-            padding: 5px; /* Espaciado interno */
-            margin-bottom: 10px; /* Margen inferior */
-            background-color: rgba(255, 255, 255, 0.5); /* Fondo blanco con 50% de opacidad */
-            color: black; /* Texto negro */
-        }
-
-        /* Estilos para el texto y botones dentro de la sección de contacto */
-        #contacto p, #contacto button {
-            background-color: transparent; /* Fondo transparente */
-            color: white; /* Texto blanco */
-            border: none; /* Sin borde */
         }
     </style>
-
-    <!-- Scripts JavaScript -->
-    <script>
-        // Función para guardar el contacto en el almacenamiento local
-        function guardarContacto(event) {
-            event.preventDefault();
-
-            const nombre = document.getElementById('nombre').value;
-            const email = document.getElementById('email').value;
-            const comentario = document.getElementById('comentario').value;
-
-            const contacto = {
-                nombre,
-                email,
-                comentario,
-                fecha: new Date().toISOString()
-            };
-
-            let contactos = localStorage.getItem('contactos');
-            if (contactos) {
-                contactos = JSON.parse(contactos);
-            } else {
-                contactos = [];
-            }
-
-            contactos.push(contacto);
-            localStorage.setItem('contactos', JSON.stringify(contactos));
-
-            alert('Contacto guardado exitosamente');
-            document.getElementById('contacto-form').reset();
-        }
-
-        // Función para exportar los contactos almacenados
-        function exportarContactos() {
-            const contactos = localStorage.getItem('contactos');
-            if (contactos) {
-                const blob = new Blob([contactos], { type: 'text/plain;charset=utf-8' });
-                const link = document.createElement('a');
-                link.href = URL.createObjectURL(blob);
-                link.download = 'contactos.txt';
-                link.click();
-            } else {
-                alert('No hay contactos para exportar');
-            }
-        }
-    </script>
 </head>
 <body>
-    <div class="container">
-        <header>
-            <h1>Inicio</h1>
-            <!-- Barra de navegación -->
-            <nav>
-                <ul>
-                    <!-- Enlaces a otras páginas -->
-                    <li><a href="index1.html">Inicio</a></li>
-                    <li><a href="niños.html">Niños</a></li>
-                    <li><a href="jovenes.html">Jovenes</a></li>
-                    <li><a href="adultos.html">Adultos</a></li>
-                    <li><a href="contacto.html">Contacto</a></li>
-                    <li><a href="sobre-nosotros.html">Nosotros somos</a></li>
-                </ul>
-            </nav>
-        </header>
-        <main>
-            <section id="contacto">
-                <h2>Contacto</h2>
-                <p>¿Alguna duda o inquietud? Estoy aquí para ayudarte. No dudes en contactarme a través del formulario. ¡Siempre estoy disponible para ayudarte en lo que necesites!</p>
-                <!-- Formulario de contacto -->
-                <form id="contacto-form" onsubmit="guardarContacto(event)">
-                    <label for="nombre">Nombre:</label>
-                    <input type="text" id="nombre" name="nombre" required>
-                    
-                    <label for="email">Email:</label>
-                    <input type="email" id="email" name="email" required>
-
-                    <label for="comentario">Comentario:</label>
-                    <textarea id="comentario" name="comentario" required></textarea>
-
-                    <div class="form-footer">
-                        <button type="submit">Enviar</button>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="index1.html">Inicio</a></li>
+                <li><a href="niños.html">Niños</a></li>
+                <li><a href="jovenes.html">Jóvenes</a></li>
+                <li><a href="adultos.html">Adultos</a></li>
+                <li><a href="contacto.html">Contacto</a></li>
+                <li><a href="añadir producto">Añadir Producto</a></li> <!-- Corregí el texto de este enlace -->
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section id="content">
+            <h1>Niños</h1>
+            <div class="animation-box">
+                <div class="flex-container">
+                    <div class="flex-item">
+                        <img src="zapatillas.jpg" alt="Observa nuestra gran variedad de modelos">
+                        <div class="overlay"></div>
+                        <p>Zapatillas</p>
                     </div>
-                </form>
-                <!-- Botón para exportar contactos -->
-                <button onclick="exportarContactos()">Exportar Contactos</button>
-            </section>
-        </main>
-        <footer>
-            <!-- Texto del pie de página -->
-            <p>&copy; 2024 Mi Página Web. Todos los derechos reservados.</p>
-         </footer>
-    </div> <!-- Cierre del contenedor principal -->
+                    <div class="flex-item">
+                        <img src="accesorios.jpg" alt="Observa nuestra gran variedad de accesorios">
+                        <div class="overlay"></div>
+                        <p>Accesorios</p>
+                    </div>
+                    <div class="flex-item">
+                        <img src="ropa.jpg" alt="Observa nuestra gran variedad de prendas de vestir">
+                        <div class="overlay"></div>
+                        <p>Ropa</p>
+                    </div> 
+                </div>
+            </div>
+        </section>
+    </main>
 </body>
 </html>
