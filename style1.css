@@ -147,13 +147,13 @@ body {
 }
 
 .ropa-1 img {
-    width: 200px;
+    width: 220px;
 }
 .ropa-2 img {
     width: 200px;
 }
 .ropa-3 img {
-    width: 200px;
+    width: 250px;
 }
 
 .polo-img {
@@ -210,7 +210,7 @@ body {
 }
 
 .services-1 img {
-    width: 25px;
+    width: 80px;
     margin-bottom: 15px;
 }
 
@@ -289,6 +289,19 @@ body {
 }
 
 .blog-1 h3 {
+    font-size: 25px;
+    color: #222324;
+}
+.blog-2 {
+    padding: 15px 55px;
+}
+.blog-2 img {
+    width: 228px;
+    border-radius: 15px;
+    margin-bottom: 15px;
+}
+
+.blog-2 h3 {
     font-size: 25px;
     color: #222324;
 }
