@@ -13,45 +13,58 @@
             background-attachment: fixed; /* Fondo fijo mientras se desplaza */
             margin: 0;
             padding: 0;
+            display: flex;
+            justify-content: center; /* Centrar horizontalmente */
+            align-items: center; /* Centrar verticalmente */
+            min-height: 100vh; /* Para que ocupe al menos el 100% de la altura de la ventana */
+        }
+        .container {
+            width: 80%; /* Ancho del contenedor */
+            max-width: 1200px; /* Ancho máximo del contenedor */
+            background-color: rgba(255, 255, 255, 0.8); /* Color de fondo con opacidad */
+            padding: 20px;
+            border-radius: 10px; /* Bordes redondeados */
         }
     </style>
 </head>
 <body>
-    <header>
-        <nav>
-            <ul>
-                <li><a href="index1.html">Inicio</a></li>
-                <li><a href="niños.html">Niños</a></li>
-                <li><a href="jovenes.html">Jóvenes</a></li>
-                <li><a href="adultos.html">Adultos</a></li>
-                <li><a href="contacto.html">Contacto</a></li>
-                <li><a href="añadir producto">Añadir Producto</a></li> <!-- Corregí el texto de este enlace -->
-            </ul>
-        </nav>
-    </header>
-    <main>
-        <section id="content">
-            <h1>Niños</h1>
-            <div class="animation-box">
-                <div class="flex-container">
-                    <div class="flex-item">
-                        <img src="zapatillas.jpg" alt="Observa nuestra gran variedad de modelos">
-                        <div class="overlay"></div>
-                        <p>Zapatillas</p>
+    <div class="container">
+        <header>
+            <nav>
+                <ul>
+                    <li><a href="index1.html">Inicio</a></li>
+                    <li><a href="niños.html">Niños</a></li>
+                    <li><a href="jovenes.html">Jóvenes</a></li>
+                    <li><a href="adultos.html">Adultos</a></li>
+                    <li><a href="contacto.html">Contacto</a></li>
+                    <li><a href="añadir producto">Añadir Producto</a></li> <!-- Corregí el texto de este enlace -->
+                </ul>
+            </nav>
+        </header>
+        <main>
+            <section id="content">
+                <h1>Niños</h1>
+                <div class="animation-box">
+                    <div class="flex-container">
+                        <div class="flex-item">
+                            <img src="zapatillas.jpg" alt="Observa nuestra gran variedad de modelos">
+                            <div class="overlay"></div>
+                            <p>Zapatillas</p>
+                        </div>
+                        <div class="flex-item">
+                            <img src="accesorios.jpg" alt="Observa nuestra gran variedad de accesorios">
+                            <div class="overlay"></div>
+                            <p>Accesorios</p>
+                        </div>
+                        <div class="flex-item">
+                            <img src="ropa.jpg" alt="Observa nuestra gran variedad de prendas de vestir">
+                            <div class="overlay"></div>
+                            <p>Ropa</p>
+                        </div> 
                     </div>
-                    <div class="flex-item">
-                        <img src="accesorios.jpg" alt="Observa nuestra gran variedad de accesorios">
-                        <div class="overlay"></div>
-                        <p>Accesorios</p>
-                    </div>
-                    <div class="flex-item">
-                        <img src="ropa.jpg" alt="Observa nuestra gran variedad de prendas de vestir">
-                        <div class="overlay"></div>
-                        <p>Ropa</p>
-                    </div> 
                 </div>
-            </div>
-        </section>
-    </main>
+            </section>
+        </main>
+    </div> <!-- Cierre del contenedor principal -->
 </body>
 </html>
