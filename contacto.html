@@ -6,6 +6,7 @@
     <title>Mi Pagina Web</title>
     <link rel="stylesheet" href="styles.css">
 
+    <!-- Estilos CSS internos -->
     <style>
         /* Resetear márgenes y relleno */
         body, html {
@@ -54,7 +55,9 @@
         }
     </style>
 
+    <!-- Scripts JavaScript -->
     <script>
+        // Función para guardar el contacto en el almacenamiento local
         function guardarContacto(event) {
             event.preventDefault();
 
@@ -83,6 +86,7 @@
             document.getElementById('contacto-form').reset();
         }
 
+        // Función para exportar los contactos almacenados
         function exportarContactos() {
             const contactos = localStorage.getItem('contactos');
             if (contactos) {
@@ -101,8 +105,10 @@
     <div class="container">
         <header>
             <h1>Inicio</h1>
+            <!-- Barra de navegación -->
             <nav>
                 <ul>
+                    <!-- Enlaces a otras páginas -->
                     <li><a href="index1.html">Inicio</a></li>
                     <li><a href="sobre-nosotros.html">Sobre Nosotros</a></li>
                     <li><a href="contacto.html">Contacto</a></li>
@@ -113,6 +119,7 @@
             <section id="contacto">
                 <h2>Contacto</h2>
                 <p>¿Alguna duda o inquietud? Estoy aquí para ayudarte. No dudes en contactarme a través del formulario. ¡Siempre estoy disponible para ayudarte en lo que necesites!</p>
+                <!-- Formulario de contacto -->
                 <form id="contacto-form" onsubmit="guardarContacto(event)">
                     <label for="nombre">Nombre:</label>
                     <input type="text" id="nombre" name="nombre" required>
@@ -127,10 +134,12 @@
                         <button type="submit">Enviar</button>
                     </div>
                 </form>
+                <!-- Botón para exportar contactos -->
                 <button onclick="exportarContactos()">Exportar Contactos</button>
             </section>
         </main>
         <footer>
+            <!-- Texto del pie de página -->
             <p>&copy; 2024 Mi Página Web. Todos los derechos reservados.</p>
          </footer>
     </div> <!-- Cierre del contenedor principal -->
