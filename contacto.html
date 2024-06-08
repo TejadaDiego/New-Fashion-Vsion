@@ -2,12 +2,12 @@
 <html lang="es">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mi Página Web</title>
+    <meta name="viewport" content="width=device-width, initial- scale=1.0">
+    <title>Mi Pagina Web</title>
     <link rel="stylesheet" href="styles.css">
 
     <style>
-        /* Reiniciamos los márgenes y relleno */
+        /* Resetear márgenes y relleno */
         body, html {
             margin: 0;
             padding: 0;
@@ -15,44 +15,42 @@
 
         /* Estilos para el contenedor principal */
         .container {
-    border: 10px solid black; /* Ancho y estilo del borde */
-    padding: 20px; /* Relleno dentro del contenedor */
-    box-sizing: border-box; /* Incluye el borde y el relleno en el ancho y alto del contenedor */
-    background-image: url('l.jpg'); /* Imagen de fondo */
-    background-size: cover; /* Ajusta la imagen para cubrir */
-    background-position: center; /* Centra la imagen */
-    background-attachment: fixed; /* Fija la imagen de fondo al desplazarse */
-    width: 100vw; /* Ancho igual al 100% del viewport width */
-    height: 100vh; /* Alto igual al 100% del viewport height */
-}
-        /* Estilos para el área principal */
-        main {
-            background-color: rgba(255, 255, 255, 0.7); /* Color de fondo con transparencia */
-            padding: 20px; /* Relleno */
-            box-sizing: border-box; /* Incluye el relleno en el ancho y alto */
+            border: 10px solid black; /* Ancho y estilo del borde */
+            padding: 20px; /* Relleno dentro del contenedor */
+            box-sizing: border-box; /* Incluir el borde y el relleno en el ancho y alto del contenedor */
+        }
+
+        /* Estilos específicos para el cuerpo */
+        body {
+            background-image: url('l.jpg');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            margin: 0;
+            padding: 0;
         }
     </style>
 
     <script>
-        // Aquí puedes agregar tus scripts JavaScript...
+        // Aquí va tu script JavaScript...
     </script>
 </head>
 <body>
     <div class="container">
         <header>
-            <h1>¡Contacto!</h1>
+            <h1>Inicio</h1>
             <nav>
                 <ul>
-                    <li><a href="index1.html">Inicio</a></li>
+                    <li><a href="inicio.html">Inicio</a></li>
                     <li><a href="sobre-nosotros.html">Sobre Nosotros</a></li>
-                    <li><a href="contacto.html">Contacto</a></li>
+                    <li><a href="contacto.html">contacto</a></li>
                 </ul>
             </nav>
         </header>
         <main>
             <section id="contacto">
                 <h2>Contacto</h2>
-                <p>¿Tienes alguna duda o inquietud? Estoy aquí para ayudarte. ¡No dudes en contactarme a través del formulario! Siempre estoy disponible para ayudarte en lo que necesites.</p>
+                <p>"¿Alguna duda o inquietud? Estoy aquí para ayudarte. No dudes en contactarme a través del formulario. ¡Siempre estoy disponible para ayudarte en lo que necesites!"</p>
                 <form id="contacto-form" onsubmit="guardarContacto(event)">
                     <label for="nombre">Nombre:</label>
                     <input type="text" id="nombre" name="nombre" required>
@@ -73,6 +71,6 @@
         <footer>
             <p>&copy; 2024 Mi Página Web. Todos los derechos reservados.</p>
          </footer>
-    </div> <!-- Fin del contenedor principal -->
+    </div> <!-- Cierre del contenedor principal -->
 </body>
 </html>
