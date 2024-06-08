@@ -24,26 +24,35 @@
             background-color: rgba(255, 255, 255, 0.8); /* Color de fondo con opacidad */
             padding: 20px;
             border-radius: 10px; /* Bordes redondeados */
+            text-align: center; /* Centrar el contenido */
         }
-        header {
-            text-align: center; /* Centrar el texto del encabezado */
-            margin-bottom: 20px; /* Espacio inferior */
+        header nav ul {
+            list-style: none; /* Quitar los marcadores de lista */
+            padding: 0;
+            margin: 0;
+        }
+        header nav ul li {
+            display: inline-block; /* Mostrar en línea */
+            margin-right: 20px; /* Espacio entre elementos */
+        }
+        header nav ul li a {
+            text-decoration: none; /* Quitar subrayado del enlace */
+            color: black; /* Color del texto */
         }
         #content {
-            text-align: center; /* Centrar el contenido */
+            margin-top: 20px; /* Espacio superior */
         }
         .flex-container {
             display: flex;
             justify-content: center; /* Centrar horizontalmente */
-            align-items: center; /* Centrar verticalmente */
             flex-wrap: wrap; /* Permitir que los elementos flexibles se envuelvan en múltiples líneas */
         }
         .flex-item {
             margin: 10px; /* Espacio entre elementos */
-            text-align: center; /* Centrar el texto */
         }
         .flex-item img {
             max-width: 100%; /* Asegurar que las imágenes no superen el ancho del contenedor */
+            height: auto; /* Altura automática para mantener la proporción */
         }
     </style>
 </head>
