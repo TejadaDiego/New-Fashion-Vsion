@@ -21,7 +21,7 @@ body {
     background-image: linear-gradient(
         rgba(0, 0, 0, 0.7),
         rgba(0, 0, 0, 0.7)
-    ), url('images.jpg');
+    ), url('images/images.jpg');
     background-position: center bottom;
     background-repeat: no-repeat;
     background-size: cover;
@@ -172,7 +172,7 @@ body {
     background-image: linear-gradient(
         rgba(0,0,0,0.7),
         rgba(0,0,0,0.7)),
-        url('modelos.jpg');
+        url('images/modelos.jpg');
     background-position: center center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -263,11 +263,11 @@ body {
 }
 
 .general-2 {
-    background-image: url('modelosjovenes.jpg');
+    background-image: url('images/modelosjovenes.jpg');
 }
 
 .general-3 {
-    background-image: url('niños.jpg');
+    background-image: url('images/niños.jpg');
 }
 
 .blog {
