@@ -6,23 +6,16 @@
     <title>Sobre Nosotros</title>
     <link rel="stylesheet" href="styles.css">
     <style>
-        section, footer {
-            background-color: transparent;
-        }
-
-        p {
-            background-color: white; 
-            padding: 10px;
-            margin: 0; 
-            color: black; 
-        }
-
-        section p:last-of-type {
-            color: black; 
+        body {
+            background-color: sblack;
+            background-image: url('1.jpeg');
+            background-size: cover;
+            background-repeat: no-repeat;
+            color: white; 
         }
     </style>
 </head>
-<body style="background-color: black; background-image: url('1.jpeg'); background-size: cover; background-repeat: no-repeat;">
+<body>
     <header>
         <h1>Sobre Nosotros</h1>
         <nav>
@@ -38,43 +31,38 @@
     </header>
     <main>
         <section>
-            <h2>Nuestro Equipo</h2>
-            <div class="member">
-                <img src="i.jpg" alt="Miembro 1">
-                <p>Nombres: Jordy Servando
-                Apellidos: Serrato Canaza
-                tel: 934225368
-                edad: 20
-                pasatiempos: hacer deporte, salir a jugar videojuegos, trabajar, limpiar, salir a comer, ver películas 
-                </p>
-            </div>
-            <div class="member">
-                <img src="a.jpg" alt="Miembro 2">
-                <p>Nombres: Diego
-                    Apellidos: Tejada Espinal
-                    tel: 962 542 289
-                    edad: 17
-                    pasatiempos: fanático del fútbol, jugar videojuegos, salir a caminar 
-                </p>
-            </div>
-            <div class="member">
-                <img src="e.jpg" alt="Miembro 3">
-                <p>Nombres: Anghelly Ivania
-                    Apellidos: Molleda Villarroel
-                    tel: 934 971 983
-                    edad: 17 
-                    pasatiempos: jugar videojuegos, dibujar, pintar, salir a comprar
-                </p>
-            </div>
-            <div class="member">
-                <img src="o.png" alt="Miembro 4">
-                <p style="color: black;">
-                    Nombres:Lukas Jhair
-                    Apellidos:Malca Gomez
-                    tel: 966 115 267
-                    pasatiempos:Boxeo videojuegos
-                    salir a correr como rocky
-                </p>
+            <h1>Nuestro Equipo</h1>
+            <div class="carousel">
+                <div class="member">
+                    <img src="i.jpg" alt="Miembro 1" class="member-img">
+                    <p>
+                        Nombres: Jordy Servando<br>
+                        Apellidos: Serrato Canaza<br>
+                        Teléfono: 934225368<br>
+                        Edad: 20<br>
+                        Pasatiempos: hacer deporte, salir a jugar videojuegos, trabajar, limpiar, salir a comer, ver películas
+                    </p>
+                </div>
+                <div class="member">
+                    <img src="a.jpg" alt="Miembro 2" class="member-img">
+                    <p>
+                        Nombres: Diego<br>
+                        Apellidos: Tejada Espinal<br>
+                        Teléfono: 962 542 289<br>
+                        Edad: 17<br>
+                        Pasatiempos: fanático del fútbol, jugar videojuegos, salir a caminar
+                    </p>
+                </div>
+                <div class="member">
+                    <img src="e.jpg" alt="Miembro 3" class="member-img">
+                    <p>
+                        Nombres: Anghelly Ivania<br>
+                        Apellidos: Molleda Villarroel<br>
+                        Teléfono: 934 971 983<br>
+                        Edad: 17<br>
+                        Pasatiempos: jugar videojuegos, dibujar, pintar, salir a comprar
+                    </p>
+                </div>
             </div>
         </section>
     </main>

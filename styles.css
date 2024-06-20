@@ -67,7 +67,7 @@ form input, form textarea {
     margin-top: 5px;
     border: 1px solid #ccc; /* Borde gris claro */
     border-radius: 5px;
-    background-color: #f9f9f9; /* Fondo gris muy claro */
+    background-color: white; /* Fondo gris muy claro */
     color: #333333; /* Texto gris oscuro */
 }
 
@@ -168,4 +168,102 @@ form input:invalid, form textarea:invalid {
     max-width: 200px; /* Ajusta este valor según el tamaño deseado */
     border-radius: 50%; /* Hace la imagen redonda */
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Estilos para el carrusel de imágenes */
+.carousel {
+    display: flex;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch;
+    justify-content: center; /* Centrar el contenido horizontalmente */
+}
+
+.member {
+    flex: 0 0 auto;
+    margin-right: 20px;
+    scroll-snap-align: start;
+    width: 300px;
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    background-color: #008cff;
+    text-align: left; /* Alinear el texto a la izquierda */
+}
+
+.member img {
+    width: 100%; /* Imágenes ocupan todo el ancho del contenedor */
+    max-width: 100%; /* Imágenes no se agrandan más allá de su tamaño natural */
+    border-radius: 50%; /* Hace las imágenes redondas */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Sombra ligera */
+}
+
+@media (max-width: 768px) {
+    .carousel {
+        flex-wrap: nowrap; /* Evita el desplazamiento en línea en pantallas pequeñas */
+    }
+
+    .member {
+        width: 80%; /* Ancho ajustable para dispositivos móviles */
+        margin-right: 10px; /* Espacio reducido entre miembros */
+    }
+}
+/* Resetear márgenes y relleno */
+body, html {
+    margin: 0;
+    padding: 0;
+}
+
+/* Estilos para el contenedor principal */
+.container {
+    border: 10px solid black; /* Ancho y estilo del borde */
+    padding: 20px; /* Relleno dentro del contenedor */
+    box-sizing: border-box; /* Incluir el borde y el relleno en el ancho y alto del contenedor */
+}
+
+/* Estilos específicos para el cuerpo */
+body {
+    background-image: url('l.jpg');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    margin: 0;
+    padding: 0;
+    color: rgb(78, 220, 255); /* Texto blanco */
+}
+
+/* Estilos para la sección de contacto */
+#contacto {
+    padding: 20px;
+    background-color: rgba(0, 0, 0, 0.5); /* Fondo transparente */
+}
+
+/* Estilos para los labels y inputs dentro de la sección de contacto */
+#contacto label, #contacto input {
+    border: 1px solid rgb(255, 255, 255); /* Borde blanco */
+    padding: 5px; /* Espaciado interno */
+    margin-bottom: 10px; /* Margen inferior */
+    background-color: rgba(255, 255, 255, 0.5); /* Fondo blanco con 50% de opacidad */
+    color: black; /* Texto negro */
+}
+
+/* Estilos para el texto y botones dentro de la sección de contacto */
+#contacto p, #contacto button {
+    background-color: transparent; /* Fondo transparente */
+    color: white; /* Texto blanco */
+    border: none; /* Sin borde */
+}
+ 
+
+section, footer {
+    background-color: transparent;
+}
+p {
+    background-color: rgb(248, 139, 37);
+    padding: 10px;
+    margin: 0;
+    color: black; 
+}
+section p:last-of-type {
+    color: black; 
 }
