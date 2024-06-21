@@ -286,3 +286,12 @@ body {
     border-radius: 4px;
     padding: 5px;
 }
+
+.border-example {
+    border: 5px solid #e11900;
+    border-radius: 25px 10px 25px 10px;
+    border-style: double;
+    padding: 20px;
+    margin-bottom: 20px;
+    box-shadow: 5px 5px 15px #000000;
+}
