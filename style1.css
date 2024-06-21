@@ -101,19 +101,20 @@ body {
 .btn-1 {
     display: inline-block;
     padding: 11px 35px;
-    background-color: blanchedalmond;
+    background-color: #61c9a8;
     color: rgb(42, 43, 39);
     text-transform: uppercase;
 }
 
 .btn-1:hover {
-    background-color: rgb(240, 208, 160);
+    background-color: #d3f7eb;
 }
 
 .polo {
     padding: 100px 0;
-    background-color: rgb(222, 224, 215);
+    background-color: rgb(255, 255, 255);
     position: relative;
+    background-image: linear-gradient(to right, #fdf7ff,rgb(241, 235, 198));
 }
 
 .polo-content {
@@ -226,7 +227,7 @@ body {
 .general-1 {
     width: 50%;
     padding: 50px; 
-    background-color: #707277;
+    background-color: #ed9840;
     display: flex;
     flex-direction: column; 
     align-items: flex-start;
@@ -237,7 +238,7 @@ body {
 .general-1 h2 {
     font-size: 35px; 
     line-height: 45px;
-    color: #323337;
+    color: #232425;
     text-transform: uppercase;
     margin-bottom: 20px;
     width: 100%; 
@@ -264,15 +265,18 @@ body {
 
 .general-2 {
     background-image: url('images/modelosjovenes.jpg');
+    animation: slideIn 2s;
 }
 
 .general-3 {
     background-image: url('images/niños.jpg');
+    animation: slideIn 2s;
 }
 
 .blog {
-    padding: 100px 0;
-    text-align: center;
+   padding: 80px;
+   text-align: center;
+    
 }
 
 .blog-content {
@@ -328,6 +332,5 @@ body {
     display: block;
     margin-bottom: 15px;
 }
-
 
 
