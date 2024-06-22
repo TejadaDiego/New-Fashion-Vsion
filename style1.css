@@ -107,7 +107,7 @@ body {
 }
 
 .btn-1:hover {
-    background-color: #d3f7eb;
+    background-color: #61c9a8;
 }
 
 .polo {
@@ -274,9 +274,8 @@ body {
 }
 
 .blog {
-   padding: 80px;
-   text-align: center;
-    
+   padding: 150px;
+    text-align: center;
 }
 
 .blog-content {
