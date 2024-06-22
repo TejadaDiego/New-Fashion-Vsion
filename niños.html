@@ -1,50 +1,61 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>New Fashion Vision</title>
-    <link rel="stylesheet" href="styles 2.css">
+    <title>Document</title>
+    <link rel="stylesheet" href="niños.css">
 </head>
 <body>
-    <div class="container">
-            <header>
-                <nav>
-                    <ul>
-                        <li><a href="index1.html">Inicio</a></li>
-                        <li><a href="niños.html">Niños</a></li>
-                        <li><a href="jovenes.html">Jóvenes</a></li>
-                        <li><a href="adultos.html">Adultos</a></li>
-                        <li><a href="contacto.html">Contacto</a></li>
-                        <li><a href="añadir_producto.html">Añadir Producto</a></li>
-                    </ul>
-                </nav>
-            </header>
-            <main>
-                <section id="content">
-                    <h1>Niños</h1>
-                    <div class=".animation-box">
-                        <div class="flex-container">
-                            <div class="flex-item">
-
-                                <img src="zapatillas.jpg" alt="Observa nuestra gran variedad de modelos">
-                                <p>Zapatillas</p>
-                            </div>
-                            
-                            <div class="flex-item">
-                                <img src="accesorios.jpg" alt="Observa nuestra gran variedad de accesorios">
-                                <p>Accesorios</p>
-                            </div>
-
-                            <div class="flex-item">
-                                <img src="Ropa.jpg" alt="Observa nuestra gran variedad de prendas de vestir">
-                                <p>Ropa</p>
-                            </div> 
-                        </div>
-                    </div>
-                </section>
-            </main>
+    <header class="header">
+        <div class="menu container">
+            <input type="checkbox" id="menu"/>
+            <label for="menu"></label>
+            <nav class="navbar">
+                <ul>
+                    <li><a href="index1.html">Inicio</a></li>
+                    <li><a href="niños.html">Niños</a></li>
+                    <li><a href="jovenes.html">Jovenes</a></li>
+                    <li><a href="adultos.html">Adultos</a></li>
+                    <li><a href="contacto.html">Contacto</a></li>
+                    <li><a href="sobre-nosotros.html">Nosotros somos</a></li>
+                </ul>
+            </nav>
         </div>
-    </div> 
+        <div class="background-animation"></div>
+        <div class="header-content">
+            <h1>New Fashion Vision</h1>
+            <p>Bienvenidos a la pagina de new fashion vision seccion de niños aqui podras encontrar desde accesorios para vestir, ropa y zapatillas de diferentes diseños y modelos</p>
+        </div>
+    </header>
+    <div class="background-example">
+        <main>
+            <section id="content">
+                <h1>Catalogos</h1>
+                <p>Explora nuestros catalogos de productos y encuentra las nuevas novedades</p>
+                <div class="flex-container">
+                    <div class="border-example">
+                        <a href="zapatillas.html">
+                            <img src="images/zapatillas.jpg" alt="Observa nuestra gran variedad de modelos">
+                            <p>Zapatillas</p>
+                        </a>
+                    </div>
+                    <div class="border-example">
+                        <a href="accesorios.html">
+                            <img src="images/accesorios.jpg" alt="Observa nuestra gran variedad de accesorios">
+                            <p>Accesorios</p>
+                        </a>
+                    </div>
+                    <div class="border-example">
+                        <a href="ropa.html">
+                            <img src="images/Ropa.jpg" alt="Observa nuestra gran variedad de ropa">
+                            <p>Ropa</p>
+                        </a>
+                    </div>
+                </div>
+            </section>
+        </main>
+    </div>
 </body>
 </html>
+

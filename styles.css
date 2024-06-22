@@ -223,7 +223,7 @@ body, html {
 
 /* Estilos específicos para el cuerpo */
 body {
-    background-image: url('l.jpg');
+    background-image: url('images/l.jpg');
     background-size: cover;
     background-position: center;
     background-attachment: fixed;

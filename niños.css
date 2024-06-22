@@ -1,0 +1,243 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+}
+
+body {
+    font-family: "DM Serif Text", serif;
+}
+
+.container {
+    max-width: 1800px;
+    margin: 10px solid;
+    background-color: #000000;
+}
+
+.header {
+    background-image: linear-gradient(
+        rgba(0, 0, 0, 0.7),
+        rgba(0, 0, 0, 0.7)), url('images/Fondo.jpg');
+    background-position: center bottom;
+    background-repeat: no-repeat;
+    background-size: cover;
+    min-height: 70vh; 
+    display: flex;
+    align-items: center;
+}
+
+.menu {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.menu .navbar ul {
+    display: flex;
+}
+
+.menu .navbar ul li {
+    position: relative;
+}
+
+.menu .navbar ul li a {
+    font-size: 18px;
+    padding: 20px;
+    color: beige;
+    display: block;
+    font-weight: 600;
+}
+
+.menu .navbar ul li a:hover {
+    color: rgb(113, 188, 201);
+}
+
+#menu {
+    display: none;
+}
+
+.menu-icono {
+    width: 25px;
+}
+
+.menu label {
+    cursor: pointer;
+    display: none;
+}
+
+.header-content {
+    text-align: center;
+}
+
+.header-content h1 {
+    font-size: 75px;
+    line-height: 80px;
+    color: wheat;
+    text-transform: uppercase;
+    margin-bottom: 55px;
+}
+
+.header-content p {
+    font-size: 16px;
+    color: antiquewhite;
+    padding: 0 250px;
+    margin-bottom: 25px;
+}
+
+
+.flex-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.flex-item {
+    flex: 1 1 30%; /* Grow to fill space, but maintain a minimum width */
+    margin: 10px;
+    text-align: center;
+}
+
+.flex-item img {
+    max-width: 100%;
+    height: auto;
+    border: 2px solid #ddd;
+    border-radius: 4px;
+    padding: 5px;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.header {
+    background-color: #333;
+    color: #fff;
+    padding: 20px 0;
+}
+
+.menu {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.navbar ul {
+    list-style: none;
+    display: flex;
+    padding: 0;
+}
+
+.navbar ul li {
+    margin: 0 15px;
+}
+
+.navbar ul li a {
+    color: #fff;
+    text-decoration: none;
+}
+
+
+.header-content {
+    text-align: center;
+    padding: 50px 20px;
+}
+
+
+.flex-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.flex-item {
+    flex: 1 1 30%;
+    margin: 10px;
+    text-align: center;
+}
+
+.flex-item img {
+    max-width: 100%;
+    height: auto;
+    border: 2px solid #000000;
+    border-radius: 4px;
+    padding: 5px;
+}
+
+
+.border-example {
+    border: 5px solid #e11900;
+    border-radius: 25px 10px 25px 10px;
+    border-style: double;
+    padding: 20px;
+    margin-bottom: 20px;
+    box-shadow: 5px 5px 10px #000000;
+}
+
+/* Agrega la animación de degradado */
+@keyframes colorGradient {
+    0% {
+        background-image: linear-gradient(45deg, #ff9a9e, #fad0c4);
+        background-image: linear-gradient(45deg, #FFB6C1, #FFD700)}
+    25% {
+        background-image: linear-gradient(45deg, #fad0c4, #fbc2eb);
+        background-image: linear-gradient(45deg, #FFD700, #ADFF2F)}
+    50% {
+        background-image: linear-gradient(45deg, #fbc2eb, #a18cd1);
+        background-image: linear-gradient(45deg, #ADFF2F, #87CEEB)}
+    75% {
+        background-image: linear-gradient(45deg, #a18cd1, #ff9a9e);
+        background-image: linear-gradient(45deg, #87CEEB, #FFB6C1)}
+    100% {
+        background-image: linear-gradient(45deg, #ff9a9e, #fad0c4);
+        background-image: linear-gradient(45deg, #FFB6C1, #FFD700)}
+}
+
+/* Aplica la animación de degradado al fondo de la página */
+.background-animation {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(45deg, #ff9a9e, #fad0c4);
+    animation: colorGradient 10s infinite;
+    z-index: -1; /* Asegúrate de que el fondo esté detrás del contenido */
+}
+
+/* Otros estilos para el fondo */
+.background-example {
+    position: relative;
+    z-index: 1; /* Para asegurarse de que el contenido esté por encima del fondo */
+    padding: 20px;
+    text-align: center;
+    margin: 20px 0;
+}
+
+/* Estilos para el contenedor de texto */
+.text-container {
+    text-align: center;
+    margin-top: 10px;
+    margin: 3;
+    border: 10;
+}
+
+/* Estilos para el título y precio de los ítems */
+.item-title {
+    font-size: 1.2em;
+    font-weight: bold;
+}
+
+.item-price {
+    font-size: 1.1em;
+    color: #000000; /* Cambia el color si lo prefieres */
+}
+
