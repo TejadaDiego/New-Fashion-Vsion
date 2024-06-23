@@ -136,7 +136,7 @@ body {
 .slider-frame ul {
     display: flex;
     padding: 0;
-    width: 400%;
+    width: 400%; /* 4 imágenes, cada una 100% de la ventana del slider */
     animation: slide 16s infinite alternate ease-in-out; /*pa q entre suave y salga igual*/
 }
 
@@ -277,7 +277,10 @@ body {
 }
 
 
-
+/*Este ejemplo crea un slider simple
+ donde las imágenes se deslizan a
+ utomáticamente de una 
+a otra en un bucle infinito*/
 
 @keyframes slide /*para manejar como se mueve las img*/{
     0% {margin-left: 0%;}
