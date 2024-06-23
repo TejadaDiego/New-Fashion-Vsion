@@ -22,7 +22,7 @@ body {
     background-image: linear-gradient(
         rgba(0,0,0,0.7),
         rgba(0,0,0,0.7)),
-        url('images/pexels-suru-2899937.jpg');
+        url('../jovenes/imagenes3/pexels-suru-2899937.jpg');
     background-position: center center;
     background-repeat: no-repeat;
     background-size: cover;

@@ -21,7 +21,7 @@ body {
     background-image: linear-gradient(
         rgba(0, 0, 0, 0.7),
         rgba(0, 0, 0, 0.7)
-    ), url('images/images.jpg');
+    ), url('../index/imagenes2/images.jpg');
     background-position: center bottom;
     background-repeat: no-repeat;
     background-size: cover;
@@ -107,7 +107,7 @@ body {
 }
 
 .btn-1:hover {
-    background-color: #61c9a8;
+    background-color: #9ccebe;
 }
 
 .polo {
@@ -173,7 +173,7 @@ body {
     background-image: linear-gradient(
         rgba(0,0,0,0.7),
         rgba(0,0,0,0.7)),
-        url('images/modelos.jpg');
+        url('../index/imagenes2/images.jpg');
     background-position: center center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -264,12 +264,12 @@ body {
 }
 
 .general-2 {
-    background-image: url('images/modelosjovenes.jpg');
+    background-image: url('../index/imagenes2/modelosjovenes.jpg');
     animation: slideIn 2s;
 }
 
 .general-3 {
-    background-image: url('images/niños.jpg');
+    background-image: url('../index/imagenes2/niños.jpg');
     animation: slideIn 2s;
 }
 
