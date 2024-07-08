@@ -180,6 +180,9 @@ body {
     padding: 20px;
     margin-bottom: 20px;
     box-shadow: 5px 5px 10px #000000;
+    /* Ajustar tamaño máximo para las imágenes */
+    max-width: 100%; /* Ajustar a ancho máximo del contenedor */
+    height: auto; /* Mantener la proporción de aspecto */
 }
 
 /* Agrega la animación de degradado */
