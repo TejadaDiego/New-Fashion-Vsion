@@ -325,9 +325,10 @@ h1{
 }
 
 #cart {
-    padding: 20px;
+    padding: 10px;
     border: 1px solid #ddd;
-    margin: 20px;
+    margin: 10px;
+    align-items: center;
 }
 
 #cart ul {

@@ -17,9 +17,8 @@
                     <li><a href="niños.html">Niños</a></li>
                     <li><a href="../jovenes/jovenes.html">Jovenes</a></li>
                     <li><a href="../contacto-nosotros/contacto.html">Contacto</a></li>
-                    <li><a href="../contacto-nosotros/sobre-nosotros.html">Nosotros somos</a></li> <div id="cart">
-                        <p>El carrito está vacío</p>
-                    </div>
+                    <li><a href="../contacto-nosotros/sobre-nosotros.html">Nosotros somos</a></li>
+                    <li><img src="../niños/imagenes4/Carrito de compras.jpg" alt="carrito de compras" onclick="toggleCart()"></li>
                 </ul>
             </nav>
         </div>
@@ -32,36 +31,11 @@
     <div class="background-example">
         <main>
             <section id="content">
-                    <section id="container2">
-                    <input type="text" id="itemInput" placeholder="¿Que producto esta buscando?">
+                <section id="container2">
+                    <input type="text" id="itemInput" placeholder="¿Qué producto está buscando?">
                     <button onclick="addItem()">Agregar</button>
                     <div class="grid" id="itemGrid"></div>
                 </section>
-        </main>
-        </div>
-        
-        <script>
-            function addItem() {
-                // Obtener el valor del input
-                var itemValue = document.getElementById('itemInput').value;
-        
-                // Verificar que el input no esté vacío
-                if(itemValue.trim() !== "") {
-                    // Crear un nuevo div para el elemento
-                    var newItem = document.createElement('div');
-                    newItem.className = 'grid-item';
-                    newItem.textContent = itemValue;
-        
-                    // Agregar el nuevo elemento a la grilla
-                    document.getElementById('itemGrid').appendChild(newItem);
-        
-                    // Limpiar el input
-                    document.getElementById('itemInput').value = "";
-                } else {
-                    alert("Por favor, escribe un elemento antes de agregar.");
-                }
-            }
-        </script>
                 <h1>Accesorios</h1>
                 <div class="flex-container">
                     <div class="flex-item">
@@ -86,43 +60,43 @@
                         <img src="../niños/imagenes4/bufanda.jpg" alt="Accesorio 4">
                         <p class="item-title">Bufanda</p>
                         <p class="item-price">S/30.00</p>
-                        <button onclick="addToCart('bufanda', 30)">Agregar al carrito</button>
+                        <button onclick="addToCart('Bufanda', 30)">Agregar al carrito</button>
                     </div>
                     <div class="flex-item">
                         <img src="../niños/imagenes4/cinturon.jpg" alt="Accesorio 5">
                         <p class="item-title">Cinturón</p>
                         <p class="item-price">S/35.00</p>
-                        <button onclick="addToCart('cinturon', 35)">Agregar al carrito</button>
+                        <button onclick="addToCart('Cinturón', 35)">Agregar al carrito</button>
                     </div>
                     <div class="flex-item">
                         <img src="../niños/imagenes4/guantes.webp" alt="Accesorio 6">
                         <p class="item-title">Guantes</p>
                         <p class="item-price">S/25.00</p>
-                        <button onclick="addToCart('guantes', 25)">Agregar al carrito</button>
+                        <button onclick="addToCart('Guantes', 25)">Agregar al carrito</button>
                     </div>
                     <div class="flex-item">
                         <img src="../niños/imagenes4/lentes de sol.jpg" alt="Accesorio 7">
                         <p class="item-title">Lentes de sol</p>
                         <p class="item-price">S/40.00</p>
-                        <button onclick="addToCart('lentes de sol', 40)">Agregar al carrito</button>
+                        <button onclick="addToCart('Lentes de sol', 40)">Agregar al carrito</button>
                     </div>
                     <div class="flex-item">
                         <img src="../niños/imagenes4/mochila.webp" alt="Accesorio 8">
                         <p class="item-title">Mochila</p>
                         <p class="item-price">S/50.00</p>
-                        <button onclick="addToCart('mochila', 50)">Agregar al carrito</button>
+                        <button onclick="addToCart('Mochila', 50)">Agregar al carrito</button>
                     </div>
                     <div class="flex-item">
                         <img src="../niños/imagenes4/reloj.jpg" alt="Accesorio 9">
                         <p class="item-title">Reloj</p>
                         <p class="item-price">S/60.00</p>
-                        <button onclick="addToCart('reloj', 60)">Agregar al carrito</button>
+                        <button onclick="addToCart('Reloj', 60)">Agregar al carrito</button>
                     </div>
                     <div class="flex-item">
                         <img src="../niños/imagenes4/anillo.jpg" alt="Accesorio 10">
                         <p class="item-title">Anillo</p>
                         <p class="item-price">S/20.00</p>
-                        <button onclick="addToCart('anillo', 20)">Agregar al carrito</button>
+                        <button onclick="addToCart('Anillo', 20)">Agregar al carrito</button>
                     </div>
                     <div class="flex-item">
                         <img src="../niños/imagenes4/collar.jpg" alt="Accesorio 11">
@@ -134,12 +108,19 @@
                         <img src="../niños/imagenes4/pulsera.jpg" alt="Accesorio 12">
                         <p class="item-title">Pulsera</p>
                         <p class="item-price">S/20.00</p>
-                        <button onclick="addToCart('pulsera', 20)">Agregar al carrito</button>
+                        <button onclick="addToCart('Pulsera', 20)">Agregar al carrito</button>
                     </div>
                 </div>
             </section>
         </main>
-        <script src="carrito.js"></script>
     </div>
+    <!-- Carrito de compras -->
+    <div id="cart" class="cart" style="display:none;">
+        <ul id="cartItems"></ul>
+        <p id="totalPrice">Total: S/0.00</p>
+        <button onclick="clearCart()">Vaciar Carrito</button>
+        <button onclick="purchaseItems()">Comprar producto</button>
+    </div>
+    <script src="carrito.js"></script>
 </body>
 </html>
