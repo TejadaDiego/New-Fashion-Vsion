@@ -18,6 +18,7 @@
                     <li><a href="../jovenes/jovenes.html">Jovenes</a></li>
                     <li><a href="../contacto-nosotros/contacto.html">Contacto</a></li>
                     <li><a href="../contacto-nosotros/sobre-nosotros.html">Nosotros somos</a></li>
+                    <li><img src="../niños/imagenes4/Carrito de compras.jpg" alt="carrito de compras" onclick="toggleCart()"></li>
                 </ul>
             </nav>
         </div>
@@ -30,56 +31,78 @@
     <div class="background-example">
         <main>
             <section id="content">
+                <section id="container2">
+                    <input type="text" id="itemInput" placeholder="¿Qué producto está buscando?">
+                    <button onclick="addItem()">Agregar</button>
+                    <div class="grid" id="itemGrid"></div>
+                </section>
                 <h1>Zapatillas</h1>
                 <div class="flex-container">
                     <div class="flex-item">
                         <img src="../niños/imagenes4/zapatillas.jpg" alt="Zapatilla 1">
                         <p class="item-title">Zapatilla deportiva</p>
                         <p class="item-price">S/100.00</p>
+                        <button onclick="addToCart('Zapatilla deportiva', 100)">Agregar al carrito</button>
                     </div>
                     <div class="flex-item">
                         <img src="../niños/imagenes4/Adidas Racer Tr23.jpg" alt="Zapatilla 2">
                         <p class="item-title">Adidas Racer TR23</p>
                         <p class="item-price">S/259.00</p>
+                        <button onclick="addToCart('Adidas Racer TR23', 259)">Agregar al carrito</button>
                     </div>
                     <div class="flex-item">
                         <img src="../niños/imagenes4/Suede XL.jpg" alt="Zapatilla 3">
                         <p class="item-title">Suede XL</p>
                         <p class="item-price">S/239.00</p>
+                        <button onclick="addToCart('Suede XL', 239)">Agregar al carrito</button>
                     </div>
                     <div class="flex-item">
                         <img src="../niños/imagenes4/zapatilla negra.jpg" alt="Zapatilla 4">
                         <p class="item-title">Zapatilla negra</p>
                         <p class="item-price">S/190.00</p>
+                        <button onclick="addToCart('Zapatilla negra', 190)">Agregar al carrito</button>
                     </div>
                     <div class="flex-item">
                         <img src="../niños/imagenes4/zapatillas de cuero.jpg" alt="Zapatilla 5">
-                        <p class="item-title">zapatillas de cuero</p>
+                        <p class="item-title">Zapatillas de cuero</p>
                         <p class="item-price">S/90.00</p>
+                        <button onclick="addToCart('Zapatillas de cuero', 90)">Agregar al carrito</button>
                     </div>
                     <div class="flex-item">
                         <img src="../niños/imagenes4/zapatillas de futbol.jpg" alt="Zapatilla 6">
-                        <p class="item-title">Zapatillas de futbol</p>
+                        <p class="item-title">Zapatillas de fútbol</p>
                         <p class="item-price">S/87.00</p>
+                        <button onclick="addToCart('Zapatillas de fútbol', 87)">Agregar al carrito</button>
                     </div>
                     <div class="flex-item">
                         <img src="../niños/imagenes4/zapatillas escolares.jpg" alt="Zapatilla 7">
                         <p class="item-title">Zapatillas escolares</p>
                         <p class="item-price">S/80.00</p>
+                        <button onclick="addToCart('Zapatillas escolares', 80)">Agregar al carrito</button>
                     </div>
                     <div class="flex-item">
-                        <img src="..niños/imagenes4/zambitas.jpg" alt="Zapatilla 8">
-                        <p class="item-title">zambitas</p>
+                        <img src="../niños/imagenes4/zambitas.jpg" alt="Zapatilla 8">
+                        <p class="item-title">Zambitas</p>
                         <p class="item-price">S/120.00</p>
+                        <button onclick="addToCart('Zambitas', 120)">Agregar al carrito</button>
                     </div>
                     <div class="flex-item">
                         <img src="../niños/imagenes4/Urbanas Nike.jpg" alt="Zapatilla 9">
                         <p class="item-title">Urbanas</p>
                         <p class="item-price">S/90.00</p>
+                        <button onclick="addToCart('Urbanas', 90)">Agregar al carrito</button>
                     </div>
                 </div>
             </section>
         </main>
     </div>
+
+    <!-- Carrito de compras -->
+    <div id="cart" class="cart" style="display:none;">
+        <ul id="cartItems"></ul>
+        <button onclick="clearCart()">Vaciar Carrito</button>
+    </div>
+
+    <script src="carrito.js"></script>
 </body>
 </html>
