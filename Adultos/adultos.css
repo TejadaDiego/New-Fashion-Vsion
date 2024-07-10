@@ -58,19 +58,6 @@ body {
     color: rgb(113, 188, 201);
 }
 
-#menu {
-    display: none;
-}
-
-.menu-icono {
-    width: 25px;
-}
-
-.menu label {
-    cursor: pointer;
-    display: none;
-}
-
 .header-content {
     text-align: center;
 }
@@ -81,6 +68,7 @@ body {
     color: wheat;
     text-transform: uppercase;
     margin-bottom: 55px;
+    text-align: center;
 }
 
 .header-content p {
@@ -89,68 +77,6 @@ body {
     padding: 0 250px;
     margin-bottom: 25px;
 }
-
-
-.flex-container {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
-}
-
-.flex-item {
-    flex: 1 1 30%; /* Grow to fill space, but maintain a minimum width */
-    margin: 10px;
-    text-align: center;
-}
-
-.flex-item img {
-    max-width: 100%;
-    height: auto;
-    border: 2px solid #ddd;
-    border-radius: 4px;
-    padding: 5px;
-}
-
-body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-.header {
-    background-color: #333;
-    color: #fff;
-    padding: 20px 0;
-}
-
-.menu {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-.navbar ul {
-    list-style: none;
-    display: flex;
-    padding: 0;
-}
-
-.navbar ul li {
-    margin: 0 15px;
-}
-
-.navbar ul li a {
-    color: #fff;
-    text-decoration: none;
-}
-
-
-.header-content {
-    text-align: center;
-    padding: 50px 20px;
-}
-
 
 .flex-container {
     display: flex;
@@ -167,41 +93,11 @@ body {
 .flex-item img {
     max-width: 100%;
     height: auto;
-    border: 2px solid #000000;
+    border: 2px solid #ddd;
     border-radius: 4px;
     padding: 5px;
 }
 
-
-.border-example {
-    border: 5px solid #e11900;
-    border-radius: 25px 10px 25px 10px;
-    border-style: double;
-    padding: 20px;
-    margin-bottom: 20px;
-    box-shadow: 5px 5px 10px #000000;
-}
-
-/* Agrega la animación de degradado */
-@keyframes colorGradient {
-    0% {
-        background-image: linear-gradient(45deg, #ff9a9e, #fad0c4);
-        background-image: linear-gradient(45deg, #FFB6C1, #FFD700)}
-    25% {
-        background-image: linear-gradient(45deg, #fad0c4, #fbc2eb);
-        background-image: linear-gradient(45deg, #FFD700, #ADFF2F)}
-    50% {
-        background-image: linear-gradient(45deg, #fbc2eb, #a18cd1);
-        background-image: linear-gradient(45deg, #ADFF2F, #87CEEB)}
-    75% {
-        background-image: linear-gradient(45deg, #a18cd1, #ff9a9e);
-        background-image: linear-gradient(45deg, #87CEEB, #FFB6C1)}
-    100% {
-        background-image: linear-gradient(45deg, #ff9a9e, #fad0c4);
-        background-image: linear-gradient(45deg, #FFB6C1, #FFD700)}
-}
-
-/* Aplica la animación de degradado al fondo de la página */
 .background-animation {
     position: fixed;
     top: 0;
@@ -210,135 +106,25 @@ body {
     height: 100%;
     background: linear-gradient(45deg, #ff9a9e, #fad0c4);
     animation: colorGradient 10s infinite;
-    z-index: -1; /* Asegúrate de que el fondo esté detrás del contenido */
+    z-index: -1;
 }
 
-/* Otros estilos para el fondo */
-.background-example {
-    position: relative;
-    z-index: 1; /* Para asegurarse de que el contenido esté por encima del fondo */
-    padding: 20px;
-    text-align: center;
-    margin: 20px 0;
-}
-
-/* Estilos para el contenedor de texto */
-.text-container {
-    text-align: center;
-    margin-top: 10px;
-    margin: 3;
-    border: 10;
-}
-
-/* Estilos para el título y precio de los ítems */
-.item-title {
-    font-size: 1.2em;
-    font-weight: bold;
-}
-
-.item-price {
-    font-size: 1.1em;
-    color: #000000; /* Cambia el color si lo prefieres */
-}
-
-/* codigo para el buscador de productos*/
-.container2 {
-    max-width: 600px;
-    margin: 0 auto;
-    padding: 20;
-    text-align: center;
-}
-input[type="text"] {
-    width: 80%;
-    padding: 10px;
-    margin: 10px 0;
-}
-button {
-    padding: 10px 20px;
-    cursor: pointer;
-}
-.grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 1px;
-    margin-top: 20px;
-}
-.grid-item {
-    border: 1px solid #ccc;
-    padding: 10px;
-    border-radius: 5px;
-    background-color: #f9f9f9;
-}
-
-h1{
-    text-align: center;
-}
-
-.header2{
-    background-image: url('../niños/imagenes4/carrito de compras.jpg');
-    align-items: right;
-    background-position: center bottom;
-    background-repeat: no-repeat;
-    background-size: cover;
-    min-height: 70vh; 
-    display: flex;
-}
-
-
-.header2 .navbar ul {
-    list-style: none;
-    padding: 0;
-}
-
-.header2 .navbar ul li {
-    display: inline;
-    margin-right: 10px;
-}
-
-.header2 .navbar ul li a {
-    text-decoration: none;
-    color: #333;
-}
-
-.flex-container {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
-    padding: 10px;
-}
-
-.flex-item {
-    border: 1px solid #000000;
-    padding: 10px;
-    text-align: center;
-    margin: 10px;
-}
-
-.flex-item img {
-    max-width: 100px;
-}
-
-.grid-item {
-    border: 1px solid #ddd;
-    padding: 10px;
-    margin: 5px;
-}
-
-#cart {
-    padding: 10px;
-    border: 1px solid #ddd;
-    margin: 10px;
-    align-items: center;
-}
-
-#cart ul {
-    list-style: none;
-    padding: 0;
-}
-
-#cart ul li {
-    margin-bottom: 10px;
-
+@keyframes colorGradient {
+    0% {
+        background-image: linear-gradient(45deg, #ff9a9e, #fad0c4);
+    }
+    25% {
+        background-image: linear-gradient(45deg, #fad0c4, #fbc2eb);
+    }
+    50% {
+        background-image: linear-gradient(45deg, #fbc2eb, #a18cd1);
+    }
+    75% {
+        background-image: linear-gradient(45deg, #a18cd1, #ff9a9e);
+    }
+    100% {
+        background-image: linear-gradient(45deg, #ff9a9e, #fad0c4);
+    }
 }
 
 .cart {
