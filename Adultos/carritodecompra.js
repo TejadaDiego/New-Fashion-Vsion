@@ -30,20 +30,12 @@ function clearCart() {
 }
 
 function addItem() {
-    // Obtener el valor del input
     var itemValue = document.getElementById('itemInput').value;
-
-    // Verificar que el input no esté vacío
     if(itemValue.trim() !== "") {
-        // Crear un nuevo div para el elemento
         var newItem = document.createElement('div');
         newItem.className = 'grid-item';
         newItem.textContent = itemValue;
-
-        // Agregar el nuevo elemento a la grilla
         document.getElementById('itemGrid').appendChild(newItem);
-
-        // Limpiar el input
         document.getElementById('itemInput').value = "";
     } else {
         alert("Por favor, escribe un elemento antes de agregar.");
@@ -74,6 +66,7 @@ function updateCart() {
         cartItems.appendChild(li);
     });
     totalPrice.textContent = `Total: S/${total.toFixed(2)}`;
+
 }
 
 function clearCart() {
