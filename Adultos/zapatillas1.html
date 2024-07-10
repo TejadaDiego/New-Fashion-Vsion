@@ -15,7 +15,7 @@
                 <ul>
                     <li><a href="../index/index1.html">Inicio</a></li>
                     <li><a href="../niños/niños.html">Niños</a></li>
-                    <li><a href="../Adultos/adultos.html">Adultos</a></li>
+                    <li><a href="adultos.html">Adultos</a></li>
                     <li><a href="../jovenes/jovenes.html">Jovenes</a></li>
                     <li><a href="../contacto-nosotros/contacto.html">Contacto</a></li>
                     <li><a href="../contacto-nosotros/sobre-nosotros.html">Nosotros somos</a></li>
@@ -91,54 +91,8 @@
             </section>
         </main>
     </div>
-    
-    <!-- Carrito de compras -->
-    <div id="cart-adultos" class="cart" style="display:none;">
-        <ul id="cartItems"></ul>
-        <p id="totalPrice">Total: S/0.00</p>
-        <button onclick="clearCart()">Vaciar Carrito</button>
-        <button onclick="purchaseItems()">Comprar producto</button>
-    </div>
-    
-    <script>
-    // Variables globales para el carrito
-    let cartItems = [];
-    let totalPrice = 0;
 
-    // Función para agregar un artículo al carrito
-    function addToCart(itemName, price) {
-        cartItems.push({ name: itemName, price: price });
-        totalPrice += price;
-        updateCart();
-    }
-
-    // Función para actualizar la vista del carrito
-    function updateCart() {
-        let cartElement = document.getElementById('cartItems');
-        cartElement.innerHTML = ''; // Limpiar contenido existente
-
-        cartItems.forEach(item => {
-            let li = document.createElement('li');
-            li.textContent = `${item.name} - S/${item.price.toFixed(2)}`;
-            cartElement.appendChild(li);
-        });
-
-        document.getElementById('totalPrice').textContent = `Total: S/${totalPrice.toFixed(2)}`;
-        document.getElementById('cart-adultos').style.display = 'block'; // Mostrar el carrito
-    }
-
-    // Función para vaciar el carrito
-    function clearCart() {
-        cartItems = [];
-        totalPrice = 0;
-        updateCart();
-    }
-
-    // Función para simular la compra de los productos
-    function purchaseItems() {
-        alert('Compra realizada correctamente');
-        clearCart(); // Vaciar el carrito después de la compra
-    }
-    </script>
+    <!-- Script para manejar la funcionalidad del carrito de compras -->
+    <script src="carritodecompras.js"></script>
 </body>
 </html>
