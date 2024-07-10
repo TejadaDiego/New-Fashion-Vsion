@@ -11,7 +11,7 @@ body {
 }
 
 .container {
-    max-width: 1800px;
+    max-width: 2000px;
     margin: 10px solid;
     background-color: #000000;
 }
@@ -118,11 +118,6 @@ body {
     box-sizing: border-box;
 }
 
-.header {
-    background-color: #333;
-    color: #fff;
-    padding: 20px 0;
-}
 
 .menu {
     display: flex;
