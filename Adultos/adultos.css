@@ -241,3 +241,143 @@ body {
     color: #000000; /* Cambia el color si lo prefieres */
 }
 
+/* codigo para el buscador de productos*/
+.container2 {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20;
+    text-align: center;
+}
+input[type="text"] {
+    width: 80%;
+    padding: 10px;
+    margin: 10px 0;
+}
+button {
+    padding: 10px 20px;
+    cursor: pointer;
+}
+.grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1px;
+    margin-top: 20px;
+}
+.grid-item {
+    border: 1px solid #ccc;
+    padding: 10px;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+}
+
+h1{
+    text-align: center;
+}
+
+.header2{
+    background-image: url('../niños/imagenes4/carrito de compras.jpg');
+    align-items: right;
+    background-position: center bottom;
+    background-repeat: no-repeat;
+    background-size: cover;
+    min-height: 70vh; 
+    display: flex;
+}
+
+
+.header2 .navbar ul {
+    list-style: none;
+    padding: 0;
+}
+
+.header2 .navbar ul li {
+    display: inline;
+    margin-right: 10px;
+}
+
+.header2 .navbar ul li a {
+    text-decoration: none;
+    color: #333;
+}
+
+.flex-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    padding: 10px;
+}
+
+.flex-item {
+    border: 1px solid #000000;
+    padding: 10px;
+    text-align: center;
+    margin: 10px;
+}
+
+.flex-item img {
+    max-width: 100px;
+}
+
+.grid-item {
+    border: 1px solid #ddd;
+    padding: 10px;
+    margin: 5px;
+}
+
+#cart {
+    padding: 10px;
+    border: 1px solid #ddd;
+    margin: 10px;
+    align-items: center;
+}
+
+#cart ul {
+    list-style: none;
+    padding: 0;
+}
+
+#cart ul li {
+    margin-bottom: 10px;
+
+}
+
+.cart {
+    display: none;
+    position: fixed;
+    top: 20%;
+    right: 5%;
+    width: 300px;
+    padding: 20px;
+    background: #fff;
+    border: 1px solid #ccc;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.cart h2 {
+    margin-top: 0;
+}
+
+.cart ul {
+    list-style: none;
+    padding: 0;
+}
+
+.cart ul li {
+    padding: 10px;
+    border-bottom: 1px solid #ccc;
+}
+
+.cart button {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    background: #ff9500;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+.cart button:hover {
+    background: #e08900;
+}
