@@ -8,7 +8,7 @@
     font-weight: 500;
 }
 
-:root {
+:root /*define las variables --main-color */{
     --clr-white: hsl(0, 0%, 100%);
     --clr-light-gray: hsl(270, 3%, 87%);
     --clr-dark-gray: hsl(279, 6%, 55%);
