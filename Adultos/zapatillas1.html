@@ -37,68 +37,108 @@
                         <img src="../Adultos/imagenes1/d.png" alt="Zapatilla 1">
                         <p class="item-title">Zapatillas Urbanas Adidas Daily 3.0</p>
                         <p class="item-price">S/259</p>
-                        <button onclick="addToCart('Zapatillas', 15)">Agregar al carrito</button>
+                        <button onclick="addToCart('Zapatillas Urbanas Adidas Daily 3.0', 259)">Agregar al carrito</button>
                     </div>
                     <div class="flex-item">
                         <img src="../Adultos/imagenes1/1.png" alt="Zapatilla 2">
                         <p class="item-title">Zapatillas Adidas Originals Gazelle</p>
                         <p class="item-price">S/379.00</p>
-                        <button onclick="addToCart('Zapatillas', 15)">Agregar al carrito</button>
+                        <button onclick="addToCart('Zapatillas Adidas Originals Gazelle', 379)">Agregar al carrito</button>
                     </div>
                     <div class="flex-item">
                         <img src="../Adultos/imagenes1/2.png" alt="Zapatilla 3">
                         <p class="item-title">Zapatillas 3.0 Low Classic Vintage</p>
                         <p class="item-price">S/259.00</p>
-                        <button onclick="addToCart('Zapatillas', 15)">Agregar al carrito</button>
+                        <button onclick="addToCart('Zapatillas 3.0 Low Classic Vintage', 259)">Agregar al carrito</button>
                     </div>
                     <div class="flex-item">
                         <img src="../Adultos/imagenes1/3.png" alt="Zapatilla 4">
                         <p class="item-title">Zapatillas Running adidas Duramo RC</p>
                         <p class="item-price">S/209.00</p>
-                        <button onclick="addToCart('Zapatillas', 15)">Agregar al carrito</button>
+                        <button onclick="addToCart('Zapatillas Running adidas Duramo RC', 209)">Agregar al carrito</button>
                     </div>
                     <div class="flex-item">
                         <img src="../Adultos/imagenes1/4.png" alt="Zapatilla 5">
                         <p class="item-title">Zapatillas Adidas Grand Court 2.0 -cloudfoam</p>
                         <p class="item-price">S/195.30</p>
-                        <button onclick="addToCart('Zapatillas', 15)">Agregar al carrito</button>
+                        <button onclick="addToCart('Zapatillas Adidas Grand Court 2.0 -cloudfoam', 195.3)">Agregar al carrito</button>
                     </div>
                     <div class="flex-item">
                         <img src="../Adultos/imagenes1/5.png" alt="Zapatilla 6">
                         <p class="item-title">Zapatillas Urbanas Mujer Adidas Gazelle Bold</p>
                         <p class="item-price">S/429.00</p>
-                        <button onclick="addToCart('Zapatillas', 15)">Agregar al carrito</button>
+                        <button onclick="addToCart('Zapatillas Urbanas Mujer Adidas Gazelle Bold', 429)">Agregar al carrito</button>
                     </div>
                     <div class="flex-item">
                         <img src="../Adultos/imagenes1/6.png" alt="Zapatilla 7">
-                        <p class="item-title">Zapatillas Trail Running Adidas Terrex Agravic Speed -</p>
+                        <p class="item-title">Zapatillas Trail Running Adidas Terrex Agravic Speed</p>
                         <p class="item-price">S/599.00</p>
-                        <button onclick="addToCart('Zapatillas', 15)">Agregar al carrito</button>
+                        <button onclick="addToCart('Zapatillas Trail Running Adidas Terrex Agravic Speed', 599)">Agregar al carrito</button>
                     </div>
                     <div class="flex-item">
                         <img src="../Adultos/imagenes1/7.png" alt="Zapatilla 8">
-                        <p class="item-title">Zapatillas Urbanas Adidas X_plrboost
+                        <p class="item-title">Zapatillas Urbanas Adidas X_plrboost</p>
                         <p class="item-price">S/510.30</p>
-                        <button onclick="addToCart('Zapatillas', 15)">Agregar al carrito</button>
+                        <button onclick="addToCart('Zapatillas Urbanas Adidas X_plrboost', 510.3)">Agregar al carrito</button>
                     </div>
                     <div class="flex-item">
                         <img src="../Adultos/imagenes1/8.png" alt="Zapatilla 9">
                         <p class="item-title">Zapatillas Urbanas Adidas Originals Turnaround</p>
                         <p class="item-price">S/259.00</p>
-                        <button onclick="addToCart('Zapatillas', 15)">Agregar al carrito</button>
+                        <button onclick="addToCart('Zapatillas Urbanas Adidas Originals Turnaround', 259)">Agregar al carrito</button>
                     </div>
                 </div>
             </section>
         </main>
     </div>
-        <!-- Carrito de compras -->
-        <div id="cart" class="cart" style="display:none;">
-            <ul id="cartItems"></ul>
-            <p id="totalPrice">Total: S/0.00</p>
-            <button onclick="clearCart()">Vaciar Carrito</button>
-            <button onclick="purchaseItems()">Comprar producto</button>
-        </div>
     
-        <script src="carritodecompra.js"></script>
+    <!-- Carrito de compras -->
+    <div id="cart-adultos" class="cart" style="display:none;">
+        <ul id="cartItems"></ul>
+        <p id="totalPrice">Total: S/0.00</p>
+        <button onclick="clearCart()">Vaciar Carrito</button>
+        <button onclick="purchaseItems()">Comprar producto</button>
+    </div>
+    
+    <script>
+    // Variables globales para el carrito
+    let cartItems = [];
+    let totalPrice = 0;
+
+    // Función para agregar un artículo al carrito
+    function addToCart(itemName, price) {
+        cartItems.push({ name: itemName, price: price });
+        totalPrice += price;
+        updateCart();
+    }
+
+    // Función para actualizar la vista del carrito
+    function updateCart() {
+        let cartElement = document.getElementById('cartItems');
+        cartElement.innerHTML = ''; // Limpiar contenido existente
+
+        cartItems.forEach(item => {
+            let li = document.createElement('li');
+            li.textContent = `${item.name} - S/${item.price.toFixed(2)}`;
+            cartElement.appendChild(li);
+        });
+
+        document.getElementById('totalPrice').textContent = `Total: S/${totalPrice.toFixed(2)}`;
+        document.getElementById('cart-adultos').style.display = 'block'; // Mostrar el carrito
+    }
+
+    // Función para vaciar el carrito
+    function clearCart() {
+        cartItems = [];
+        totalPrice = 0;
+        updateCart();
+    }
+
+    // Función para simular la compra de los productos
+    function purchaseItems() {
+        alert('Compra realizada correctamente');
+        clearCart(); // Vaciar el carrito después de la compra
+    }
+    </script>
 </body>
 </html>
