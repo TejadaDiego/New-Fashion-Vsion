@@ -5,9 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Jóvenes</title>
     <link rel="stylesheet" href="style4.css">
+    <script src="../jovenes/carrito2.js" defer></script>
 </head>
 <body>
-
     <header class="header">
         <div class="menu container">
             <a href="#" class="logo">Logo</a>
@@ -23,7 +23,7 @@
         </div>
 
         <div class="header-txt">
-            <h1>El Renacer de la Moda Juvenil:<span>Tendencias y Estilos que Definen a la Nueva Generación</span></h1> <!-- el span es un salto de linea y en css se puede dar un estilo aparte p -->
+            <h1>El Renacer de la Moda Juvenil:<span>Tendencias y Estilos que Definen a la Nueva Generación</span></h1>
             <p>Lorem ipsum dolor sit amet consectetur, 
                 adipisicing elit. Incidunt qui in blanditiis.
                 Voluptate, sapiente, dicta soluta numquam 
@@ -34,22 +34,38 @@
                 <a href="#" class="btn-1">Información</a>
                 <a href="#" class="btn-1">Ropa</a>
             </div>
+            <div id="carrito">
+                <img src="../jovenes/imagenes3/carritos.png" alt="Carrito" id="carrito-img">
+                <span id="cuenta">0</span>
+            </div>
+
+            
+    <div id="carrito-modal" class="carrito-modal">
+        <div class="carrito-content">
+            <span class="close">&times;</span>
+            <h2>Tu Carrito</h2>
+            <ul id="carrito-items"></ul>
+            <h4 id="total-compra">Total: $0.00</h4>
+            <button id="vaciar-carrito" class="btn-2">Vaciar Carrito</button>
+            <a href="../tarjeta/tarjeta.html" class="btn-2">Confirmar Compra</a>
         </div>
+    
+    </div>
     </header>
 
     <section class="tendencias">
         <h2>Ropa en Tendencia</h2>
-        <div class="slider-frame"><!--carrusel automatico-->
+        <div class="slider-frame">
             <ul>
                 <li><img src="../jovenes/imagenes3/pose1.jpg" alt=""></li>
                 <li><img src="../jovenes/imagenes3/pose2.jpg" alt=""></li>
                 <li><img src="../jovenes/imagenes3/pose3.jpg" alt=""></li>
                 <li><img src="../jovenes/imagenes3/pose4.jpg" alt=""></li>
             </ul>
-        </div> 
+        </div>
     </section>
 
-    <main class="product container"> <!-- esta es la secion principal y solo puede haber una -->
+    <main class="product container">
         <h2>Catálogo</h2>
         <div class="product-content">
             <div class="product-1">
@@ -58,7 +74,7 @@
                     <h3>Vestido Verde primavera</h3>
                     <div class="price">
                         <p>$150.99</p>
-                        <a href="#" class="btn-2">Comprar</a>
+                        <button class="btn-2">Añadir</button>
                     </div>
                 </div>
             </div>
@@ -69,7 +85,7 @@
                     <h3>Vestido Negro Floral</h3>
                     <div class="price">
                         <p>$140.99</p>
-                        <a href="#" class="btn-2">Comprar</a>
+                        <button class="btn-2">Añadir</button>
                     </div>
                 </div>
             </div>
@@ -80,7 +96,7 @@
                     <h3>Tacones Beige para Dama</h3>
                     <div class="price">
                         <p>$230.99</p>
-                        <a href="#" class="btn-2">Comprar</a>
+                        <button class="btn-2">Añadir</button>
                     </div>
                 </div>
             </div>
@@ -91,7 +107,7 @@
                     <h3>Zapatillas Jordan Clasica Roja</h3>
                     <div class="price">
                         <p>$550.99</p>
-                        <a href="#" class="btn-2">Comprar</a>
+                        <button class="btn-2">Añadir</button>
                     </div>
                 </div>
             </div>
@@ -102,7 +118,7 @@
                     <h3>Pantalones Jean para Varon</h3>
                     <div class="price">
                         <p>$100.99</p>
-                        <a href="#" class="btn-2">Comprar</a>
+                        <button class="btn-2">Añadir</button>
                     </div>
                 </div>
             </div>
@@ -113,7 +129,7 @@
                     <h3>Zapatillas Nike Gris</h3>
                     <div class="price">
                         <p>$250.99</p>
-                        <a href="#" class="btn-2">Comprar</a>
+                        <button class="btn-2">Añadir</button>
                     </div>
                 </div>
             </div>
@@ -124,7 +140,7 @@
                     <h3>Zapatos de Vestir para Varon de Louis Vtoon</h3>
                     <div class="price">
                         <p>$650.99</p>
-                        <a href="#" class="btn-2">Comprar</a>
+                        <button class="btn-2">Añadir</button>
                     </div>
                 </div>
             </div>
@@ -135,7 +151,7 @@
                     <h3>Prenda lorem</h3>
                     <div class="price">
                         <p>$150.99</p>
-                        <a href="#" class="btn-2">Comprar</a>
+                        <button class="btn-2">Añadir</button>
                     </div>
                 </div>
             </div>
@@ -146,7 +162,7 @@
                     <h3>Prenda lorem</h3>
                     <div class="price">
                         <p>$150.99</p>
-                        <a href="#" class="btn-2">Comprar</a>
+                        <button class="btn-2">Añadir</button>
                     </div>
                 </div>
             </div>
@@ -191,6 +207,8 @@
                 <li><a href="#">Lorem</a></li>
             </ul> 
         </div>
+
+        </div>
         <div class="link">
             <h3>Título del Enlace</h3> 
             <ul>
@@ -199,6 +217,8 @@
                 <li><a href="#">Lorem</a></li>
                 <li><a href="#">Lorem</a></li>
             </ul> 
+        </div>
+
         </div>
         <div class="link">
             <h3>Título del Enlace</h3> 
