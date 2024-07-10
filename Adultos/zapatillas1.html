@@ -19,6 +19,7 @@
                     <li><a href="../jovenes/jovenes.html">Jovenes</a></li>
                     <li><a href="../contacto-nosotros/contacto.html">Contacto</a></li>
                     <li><a href="../contacto-nosotros/sobre-nosotros.html">Nosotros somos</a></li>
+                    <li><img src="../niños/imagenes4/Carrito de compras.jpg" alt="carrito de compras" onclick="toggleCart()"></li>
                 </ul>
             </nav>
         </div>
@@ -90,6 +91,14 @@
                 </div>
             </section>
         </main>
+    </div>
+
+    <!-- Carrito de compras -->
+    <div id="cart" class="cart" style="display:none;">
+        <ul id="cartItems"></ul>
+        <p id="totalPrice">Total: S/0.00</p>
+        <button onclick="clearCart()">Vaciar Carrito</button>
+        <button onclick="purchaseItems()">Comprar producto</button>
     </div>
 
     <!-- Script para manejar la funcionalidad del carrito de compras -->
