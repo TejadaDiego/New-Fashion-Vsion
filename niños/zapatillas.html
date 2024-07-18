@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Catálogo de Zapatillas</title>
+    <title>Catálogo de Zapatillas para Niños</title>
     <link rel="stylesheet" href="niños.css">
 </head>
 <body>
@@ -25,68 +25,88 @@
         </div>
         <div class="background-animation"></div>
         <div class="header-content">
-            <h1>Catálogo de Zapatillas</h1>
+            <h1>Catálogo de Zapatillas para Niños</h1>
             <p>Explora nuestra selección de zapatillas para niños</p>
         </div>
     </header>
+
     <div class="background-example">
         <main>
             <section id="content">
                 <section id="container2">
-                    <input type="text" id="itemInput" placeholder="¿Qué producto está buscando?">
+                    <input type="text" id="itemInput" placeholder="¿Qué producto estás buscando?">
                     <button onclick="addItem()">Agregar</button>
                     <div class="grid" id="itemGrid"></div>
                 </section>
+                
                 <h1>Zapatillas</h1>
+
                 <div class="flex-container">
+                    <!-- Primer par de zapatillas -->
                     <div class="flex-item">
                         <img src="../niños/imagenes4/zapatillas.jpg" alt="Zapatilla 1">
                         <p class="item-title">Zapatilla deportiva</p>
                         <p class="item-price">S/100.00</p>
                         <button onclick="addToCart('Zapatilla deportiva', 100)">Agregar al carrito</button>
                     </div>
+
+                    <!-- Segundo par de zapatillas -->
                     <div class="flex-item">
                         <img src="../niños/imagenes4/Adidas Racer Tr23.jpg" alt="Zapatilla 2">
                         <p class="item-title">Adidas Racer TR23</p>
                         <p class="item-price">S/259.00</p>
                         <button onclick="addToCart('Adidas Racer TR23', 259)">Agregar al carrito</button>
                     </div>
+
+                    <!-- Tercer par de zapatillas -->
                     <div class="flex-item">
                         <img src="../niños/imagenes4/Suede XL.jpg" alt="Zapatilla 3">
                         <p class="item-title">Suede XL</p>
                         <p class="item-price">S/239.00</p>
                         <button onclick="addToCart('Suede XL', 239)">Agregar al carrito</button>
                     </div>
+
+                    <!-- Cuarto par de zapatillas -->
                     <div class="flex-item">
                         <img src="../niños/imagenes4/zapatilla negra.jpg" alt="Zapatilla 4">
                         <p class="item-title">Zapatilla negra</p>
                         <p class="item-price">S/190.00</p>
                         <button onclick="addToCart('Zapatilla negra', 190)">Agregar al carrito</button>
                     </div>
+
+                    <!-- Quinto par de zapatillas -->
                     <div class="flex-item">
                         <img src="../niños/imagenes4/zapatillas de cuero.jpg" alt="Zapatilla 5">
                         <p class="item-title">Zapatillas de cuero</p>
                         <p class="item-price">S/90.00</p>
                         <button onclick="addToCart('Zapatillas de cuero', 90)">Agregar al carrito</button>
                     </div>
+
+                    <!-- Sexto par de zapatillas -->
                     <div class="flex-item">
                         <img src="../niños/imagenes4/zapatillas de futbol.jpg" alt="Zapatilla 6">
                         <p class="item-title">Zapatillas de fútbol</p>
                         <p class="item-price">S/87.00</p>
                         <button onclick="addToCart('Zapatillas de fútbol', 87)">Agregar al carrito</button>
                     </div>
+
+                    <!-- Séptimo par de zapatillas -->
                     <div class="flex-item">
                         <img src="../niños/imagenes4/zapatillas escolares.jpg" alt="Zapatilla 7">
                         <p class="item-title">Zapatillas escolares</p>
                         <p class="item-price">S/80.00</p>
                         <button onclick="addToCart('Zapatillas escolares', 80)">Agregar al carrito</button>
                     </div>
+
+                    <!-- Octavo par de zapatillas -->
                     <div class="flex-item">
                         <img src="../niños/imagenes4/zambitas.jpg" alt="Zapatilla 8">
                         <p class="item-title">Zambitas</p>
                         <p class="item-price">S/120.00</p>
                         <button onclick="addToCart('Zambitas', 120)">Agregar al carrito</button>
                     </div>
+
+                    <!-- Noveno par de zapatillas -->
                     <div class="flex-item">
                         <img src="../niños/imagenes4/Urbanas Nike.jpg" alt="Zapatilla 9">
                         <p class="item-title">Urbanas</p>
@@ -94,6 +114,7 @@
                         <button onclick="addToCart('Urbanas', 90)">Agregar al carrito</button>
                     </div>
                 </div>
+
             </section>
         </main>
     </div>
@@ -106,6 +127,8 @@
         <button onclick="purchaseItems()">Comprar producto</button>
     </div>
 
+    <!-- Script para manejar la funcionalidad del carrito de compras -->
     <script src="carrito.js"></script>
 </body>
 </html>
+
