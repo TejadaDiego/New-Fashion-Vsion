@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario de Compra</title>
+    <link rel="stylesheet" href="checkout.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Checkout</h1>
+        <form id="checkoutForm" class="checkout-form">
+            <div class="form-group">
+                <label for="cardOwner">Nombre del titular de la tarjeta</label>
+                <input type="text" id="cardOwner" name="cardOwner" placeholder="Nombre del titular de la tarjeta" required>
+            </div>
+            <div class="form-group">
+                <label for="cardNumber">Número de tarjeta</label>
+                <input type="text" id="cardNumber" name="cardNumber" placeholder="Número de tarjeta (16 dígitos)" maxlength="16" required>
+            </div>
+            <div class="form-group">
+                <label for="cardExp">Fecha de expiración (MM/AA)</label>
+                <input type="text" id="cardExp" name="cardExp" placeholder="MM/AA" maxlength="5" required>
+            </div>
+            <div class="form-group">
+                <label for="cardCVC">Código de seguridad (CVC)</label>
+                <input type="text" id="cardCVC" name="cardCVC" placeholder="CVC (3 dígitos)" maxlength="3" required>
+            </div>
+            <div class="form-group">
+                <label for="address">Dirección de envío</label>
+                <textarea id="address" name="address" placeholder="Dirección de envío" required></textarea>
+            </div>
+            <div class="form-group">
+                <label for="deliveryDate">Fecha de entrega preferida</label>
+                <input type="date" id="deliveryDate" name="deliveryDate" required>
+            </div>
+            <button type="button" id="btnPurchase">Procesar Compra</button>
+        </form>
+    </div>
+
+    <script src="carrito.js"></script>
+</body>
+</html>

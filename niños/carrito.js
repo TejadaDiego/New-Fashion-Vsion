@@ -1,92 +1,174 @@
-let cartItems = [];
-
-function toggleCart() {
-    const cart = document.getElementById('cart');
-    if (cart.style.display === 'none' || cart.style.display === '') {
-        cart.style.display = 'block';
-    } else {
-        cart.style.display = 'none';
-    }
-}
-
-function addToCart(itemName, itemId) {
-    cartItems.push({ name: itemName, id: itemId });
-    updateCart();
-}
-
-function updateCart() {
-    const cartList = document.getElementById('cartItems');
-    cartList.innerHTML = '';
-    cartItems.forEach(item => {
-        const listItem = document.createElement('li');
-        listItem.textContent = item.name;
-        cartList.appendChild(listItem);
-    });
-}
-
-function clearCart() {
-    cartItems = [];
-    updateCart();
-}
-
-function addItem() {
-    // Obtener el valor del input
-    var itemValue = document.getElementById('itemInput').value;
-
-    // Verificar que el input no esté vacío
-    if(itemValue.trim() !== "") {
-        // Crear un nuevo div para el elemento
-        var newItem = document.createElement('div');
-        newItem.className = 'grid-item';
-        newItem.textContent = itemValue;
-
-        // Agregar el nuevo elemento a la grilla
-        document.getElementById('itemGrid').appendChild(newItem);
-
-        // Limpiar el input
-        document.getElementById('itemInput').value = "";
-    } else {
-        alert("Por favor, escribe un elemento antes de agregar.");
-    }
-}
-
+// Variable para almacenar los elementos del carrito
 let cart = [];
 let total = 0;
 
+// Función para mostrar/ocultar el carrito de compras
 function toggleCart() {
     const cartElement = document.getElementById('cart');
-    cartElement.style.display = cartElement.style.display === 'none' ? 'block' : 'none';
+    cartElement.style.display = cartElement.style.display === 'none' || cartElement.style.display === '' ? 'block' : 'none';
 }
 
+// Función para agregar un artículo al carrito
 function addToCart(item, price) {
     cart.push({ item, price });
     total += price;
-    updateCart();
+    renderCart();
 }
 
-function updateCart() {
-    const cartItems = document.getElementById('cartItems');
-    const totalPrice = document.getElementById('totalPrice');
-    cartItems.innerHTML = '';
-    cart.forEach((product, index) => {
-        const li = document.createElement('li');
-        li.textContent = `${product.item} - S/${product.price.toFixed(2)}`;
-        cartItems.appendChild(li);
-    });
-    totalPrice.textContent = `Total: S/${total.toFixed(2)}`;
-}
+// Función para procesar la compra
+function processPurchase() {
+    // Obtener los valores de los campos del formulario
+    var cardOwner = document.getElementById('cardOwner').value;
+    var cardNumber = document.getElementById('cardNumber').value;
+    var cardExp = document.getElementById('cardExp').value;
+    var cardCVC = document.getElementById('cardCVC').value;
+    var address = document.getElementById('address').value;
+    var deliveryDate = document.getElementById('deliveryDate').value;
 
-function clearCart() {
-    cart = [];
-    total = 0;
-    updateCart();
-}
-
-function purchaseItems() {
-    if (cart.length > 0) {
-        alert('El producto ha sido comprado con éxito');
-        clearCart();
-    } else {
-        alert('El carrito está vacío');
+    // Validar que todos los campos obligatorios estén completos
+    if (cardOwner === '' || cardNumber === '' || cardExp === '' || cardCVC === '' || address === '' || deliveryDate === '') {
+        alert('Por favor, complete todos los campos antes de procesar la compra.');
+        return; // Detener el proceso de compra si falta algún dato
     }
+
+    // Validar la longitud del número de tarjeta (debe ser 16 dígitos)
+    if (cardNumber.length !== 16) {
+        alert('Número de tarjeta inválido. El número de tarjeta debe tener 16 dígitos.');
+        return; // Detener el proceso de compra si la longitud no es válida
+    }
+
+    // Si todos los campos y datos de la tarjeta son válidos, mostrar alerta de compra exitosa
+    alert("¡Producto comprado con éxito!");
+
+    // Redirigir a la página principal
+    window.location.href = "../index/index1.html";
+}
+
+// Escuchar el evento click del botón de procesar compra
+document.getElementById('btnPurchase').addEventListener('click', function() {
+    processPurchase();
+});
+
+// Función para validar el número de tarjeta
+function isValidCardNumber(cardNumber) {
+    // Utiliza una expresión regular para verificar si solo contiene números y tiene una longitud adecuada
+    var cardNumberRegex = /^[0-9]{16}$/; // Asumiendo tarjetas de crédito con 16 dígitos
+    return cardNumberRegex.test(cardNumber);
+}
+
+// Función para validar la fecha de expiración (MM/AA)
+function isValidCardExp(cardExp) {
+    // Utiliza una expresión regular para verificar el formato MM/AA
+    var cardExpRegex = /^(0[1-9]|1[0-2])\/([0-9]{2})$/;
+    return cardExpRegex.test(cardExp);
+}
+
+// Función para validar el CVC
+function isValidCardCVC(cardCVC) {
+    // Utiliza una expresión regular para verificar si solo contiene números y tiene una longitud adecuada
+    var cardCVCRegex = /^[0-9]{3}$/; // Asumiendo CVC de 3 dígitos
+    return cardCVCRegex.test(cardCVC);
+}
+// Función para manejar el evento de entrada en los campos del formulario
+document.addEventListener('DOMContentLoaded', function() {
+    var cardOwnerInput = document.getElementById('cardOwner');
+    var cardNumberInput = document.getElementById('cardNumber');
+    var cardExpInput = document.getElementById('cardExp');
+    var cardCVCInput = document.getElementById('cardCVC');
+    var addressInput = document.getElementById('address');
+    var deliveryDateInput = document.getElementById('deliveryDate');
+
+    // Escuchar los eventos de entrada para actualizar dinámicamente el valor del campo
+    cardOwnerInput.addEventListener('input', function() {
+        updateFormData('cardOwner', cardOwnerInput.value);
+    });
+
+    cardNumberInput.addEventListener('input', function() {
+        updateFormData('cardNumber', cardNumberInput.value);
+    });
+
+    cardExpInput.addEventListener('input', function() {
+        updateFormData('cardExp', cardExpInput.value);
+    });
+
+    cardCVCInput.addEventListener('input', function() {
+        updateFormData('cardCVC', cardCVCInput.value);
+    });
+
+    addressInput.addEventListener('input', function() {
+        updateFormData('address', addressInput.value);
+    });
+
+    deliveryDateInput.addEventListener('input', function() {
+        updateFormData('deliveryDate', deliveryDateInput.value);
+    });
+});
+
+// Función para actualizar el valor del campo en el formulario
+function updateFormData(fieldName, value) {
+    var formElement = document.getElementById(fieldName);
+    if (formElement) {
+        formElement.value = value;
+    }
+}
+
+// Escuchar el evento click del botón de procesar compra
+document.getElementById('btnPurchase').addEventListener('click', function() {
+    validateAndProcess();
+});
+
+// Función para validar y procesar la compra
+function validateAndProcess() {
+    var cardOwner = document.getElementById('cardOwner').value;
+    var cardNumber = document.getElementById('cardNumber').value;
+    var cardExp = document.getElementById('cardExp').value;
+    var cardCVC = document.getElementById('cardCVC').value;
+    var address = document.getElementById('address').value;
+    var deliveryDate = document.getElementById('deliveryDate').value;
+
+    // Validar que todos los campos obligatorios estén completos
+    if (cardOwner === '' || cardNumber === '' || cardExp === '' || cardCVC === '' || address === '' || deliveryDate === '') {
+        alert('Por favor, complete todos los campos antes de procesar la compra.');
+        return;
+    }
+
+    // Validar el número de tarjeta (solo números y longitud)
+    if (!isValidCardNumber(cardNumber)) {
+        alert('Número de tarjeta inválido. Por favor, ingrese un número de tarjeta válido.');
+        return;
+    }
+
+    // Validar la fecha de expiración (formato MM/AA)
+    if (!isValidCardExp(cardExp)) {
+        alert('Fecha de expiración inválida. Por favor, ingrese una fecha de expiración válida en formato MM/AA.');
+        return;
+    }
+
+    // Validar el CVC (solo números y longitud)
+    if (!isValidCardCVC(cardCVC)) {
+        alert('CVC inválido. Por favor, ingrese un código CVC válido.');
+        return;
+    }
+
+    // Si todos los campos y datos de la tarjeta son válidos, mostrar alerta de compra exitosa
+    alert("¡Producto comprado con éxito!");
+
+    // Redirigir a la página principal o realizar otras acciones necesarias después de la compra
+    // window.location.href = "ruta-a-tu-pagina-principal.html";
+}
+
+// Funciones de validación
+function isValidCardNumber(cardNumber) {
+    var cardNumberRegex = /^[0-9]{16}$/; // Asumiendo tarjetas de crédito con 16 dígitos
+    return cardNumberRegex.test(cardNumber);
+}
+
+function isValidCardExp(cardExp) {
+    var cardExpRegex = /^(0[1-9]|1[0-2])\/([0-9]{2})$/;
+    return cardExpRegex.test(cardExp);
+}
+
+function isValidCardCVC(cardCVC) {
+    var cardCVCRegex = /^[0-9]{3}$/; // Asumiendo CVC de 3 dígitos
+    return cardCVCRegex.test(cardCVC);
 }
