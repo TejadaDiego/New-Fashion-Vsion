@@ -376,3 +376,42 @@ h1{
 .cart button:hover {
     background: #e08900;
 }
+
+.cart {
+    position: fixed;
+    top: 0;
+    right: 0;
+    background-color: #fff;
+    padding: 20px;
+    width: 300px;
+    max-height: 100vh;
+    overflow-y: auto;
+    box-shadow: -2px 0 5px rgba(0,0,0,0.1);
+    z-index: 1000;
+}
+
+.cart ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.cart p {
+    font-size: 1.1rem;
+    margin-bottom: 10px;
+}
+
+.cart button {
+    margin-top: 10px;
+    width: 100%;
+    padding: 10px;
+    background-color: #333;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.cart button:hover {
+    background-color: #555;
+}
