@@ -1,0 +1,61 @@
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    width: 100%;
+    position: relative;
+    background: url(hero-bg.jpg) center/cover;
+}
+
+.content-container {
+    max-width: 800px;
+    width: 100%;
+    padding: 20px;
+    background-color: #ffffff; /* Fondo blanco */
+    border-radius: 8px; /* Bordes redondeados */
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1); /* Sombra suave */
+    margin-top: 30px; /* Espacio superior */
+}
+
+header {
+    background-color: #ffffff; /* Fondo blanco para el encabezado */
+    text-align: center; /* Alineación centrada del texto */
+    padding: 20px; /* Espaciado interno */
+    border-top-left-radius: 8px; /* Redondeo de la esquina superior izquierda */
+    border-top-right-radius: 8px; /* Redondeo de la esquina superior derecha */
+    margin-top: -30px; /* Superposición para ocultar el borde superior del contenedor de beneficios */
+}
+
+header h1 {
+    margin: 0;
+    font-size: 2rem;
+    color: #333; /* Color del texto */
+}
+
+.benefits-container {
+    background-color: #ffffff; /* Fondo blanco */
+    border-radius: 8px; /* Bordes redondeados */
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1); /* Sombra suave */
+    padding: 20px; /* Espaciado interno */
+    margin-top: -20px; /* Superposición para ocultar el borde superior del encabezado */
+}
+
+.benefit {
+    margin-bottom: 20px;
+    padding: 20px;
+    border: 1px solid #e0e0e0;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+}
+
+.benefit h2 {
+    color: #333;
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+}
+
+.benefit p {
+    color: #777;
+    line-height: 1.6;
+}
